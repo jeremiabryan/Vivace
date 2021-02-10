@@ -15,6 +15,9 @@
 		89A199A225D0EA3300FF9206 /* Vivace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89A199A025D0EA3300FF9206 /* Vivace.xcdatamodeld */; };
 		89A199AD25D0EA3300FF9206 /* VivaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A199AC25D0EA3300FF9206 /* VivaceTests.swift */; };
 		89A199B825D0EA3300FF9206 /* VivaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A199B725D0EA3300FF9206 /* VivaceUITests.swift */; };
+		E078D00725D259C500C128AB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D00625D259C500C128AB /* TabBar.swift */; };
+		E078D01425D2654B00C128AB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01325D2654B00C128AB /* BlurView.swift */; };
+		E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01825D2722200C128AB /* MiniPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		89A199B325D0EA3300FF9206 /* VivaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A199B725D0EA3300FF9206 /* VivaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaceUITests.swift; sourceTree = "<group>"; };
 		89A199B925D0EA3300FF9206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E078D00625D259C500C128AB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		E078D01325D2654B00C128AB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		E078D01825D2722200C128AB /* MiniPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		89A1999425D0EA3200FF9206 /* Vivace */ = {
 			isa = PBXGroup;
 			children = (
+				E078D00525D258AA00C128AB /* View */,
 				89A1999525D0EA3200FF9206 /* VivaceApp.swift */,
 				89A1999725D0EA3200FF9206 /* ContentView.swift */,
 				89A1999925D0EA3300FF9206 /* Assets.xcassets */,
@@ -134,6 +141,16 @@
 				89A199B925D0EA3300FF9206 /* Info.plist */,
 			);
 			path = VivaceUITests;
+			sourceTree = "<group>";
+		};
+		E078D00525D258AA00C128AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E078D00625D259C500C128AB /* TabBar.swift */,
+				E078D01325D2654B00C128AB /* BlurView.swift */,
+				E078D01825D2722200C128AB /* MiniPlayer.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +286,9 @@
 				89A199A225D0EA3300FF9206 /* Vivace.xcdatamodeld in Sources */,
 				89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */,
 				89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */,
+				E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */,
+				E078D00725D259C500C128AB /* TabBar.swift in Sources */,
+				E078D01425D2654B00C128AB /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
