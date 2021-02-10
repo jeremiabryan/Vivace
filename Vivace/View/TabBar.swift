@@ -34,13 +34,22 @@ struct TabBar: View {
                             Image(systemName: "magnifyingglass")
                             Text("Search")
                         }
+                    
+                    Text("Current Source")
+                        .tag(3)
+                        .tabItem {
+                            Image(systemName: "magnifyingglass")
+                            Text("Current Source")
+                        }
+                    
                  MiniPlayer()
+                    .offset(y: 20)
                     
                 }
                 MiniPlayer()
                })
-        MiniPlayer()
-            .offset(y: 48)
+//        MiniPlayer()
+//            .offset(y: 48)
         
     }
     
