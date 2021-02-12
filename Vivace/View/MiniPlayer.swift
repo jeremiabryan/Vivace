@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MiniPlayer: View {
+    var animation: Namespace.ID
+    @Binding var expand : Bool
     var body: some View {
         VStack {
             
@@ -34,16 +36,18 @@ struct MiniPlayer: View {
             }
             .padding(.horizontal)
         }
-        .frame(height: 80)
+        .frame(maxHeight: expand ? .infinity : 80)
         .background(
             VStack(spacing: 0) {
                 BlurView()
                 Divider()
             }
-            
-        
-        )
-        .offset(y: -48)
+            .onTapGesture(perform: {
+                    withAnimation(.spring()) {
+                        expand.toggle()}
+                    })
+            )
+        .offset(y: expand ? 0 : -48)
     }
 }
 
