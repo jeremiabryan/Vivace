@@ -12,7 +12,7 @@ struct TabBar: View {
     @State var current = 2
     var body: some View {
         
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .center),
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom),
                content: {
         
                 TabView(selection: $current) {
@@ -42,14 +42,9 @@ struct TabBar: View {
                             Text("Current Source")
                         }
                     
-                 MiniPlayer()
-                    .offset(y: 20)
-                    
                 }
                 MiniPlayer()
                })
-//        MiniPlayer()
-//            .offset(y: 48)
         
     }
     
