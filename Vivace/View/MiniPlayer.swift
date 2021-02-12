@@ -4,6 +4,11 @@
 //
 //  Created by Devin Rogers on 2/9/21.
 //
+// NOTE: The addition of the arrow.up.message, airplayaudio, and list.bullet buttons
+// make this app graphically ineligible for smaller screen devices.
+// Smaller devices may need a different build if this can't be fixed (by the project deadline).
+// For testing, we should probably fix it.
+// Worst case scenario, compress the GUI for all device builds.
 
 import SwiftUI
 
@@ -11,9 +16,11 @@ struct MiniPlayer: View {
     var height = UIScreen.main.bounds.height / 3
     var animation: Namespace.ID
     @Binding var expand : Bool
+    @State var volume : CGFloat = 0
+    @State var offset : CGFloat = 0
+    var safeArea = UIApplication.shared.windows.first?.safeAreaInsets
+    
     var body: some View {
-        
-        var safeArea = UIApplication.shared.windows.first?.safeAreaInsets
         
         VStack {
             Capsule()
@@ -56,7 +63,8 @@ struct MiniPlayer: View {
             }
             .padding(.horizontal)
             
-            VStack {
+            VStack(spacing: 15) {
+                Spacer(minLength: 0)
                 
                 HStack {
                     if (expand) {
@@ -74,8 +82,8 @@ struct MiniPlayer: View {
                     })
                     
                 }
+                .padding(.top, 20)
                 .padding()
-                .padding(.top)
                 
                 // Live String
                 HStack {
@@ -92,9 +100,45 @@ struct MiniPlayer: View {
                 }
                 .padding()
                 
+                Button(action: {}) {
+                    Image(systemName: "stop.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(.primary)
+                    
+                }
+                .padding()
+                
                 Spacer(minLength: 0)
+                
+                HStack(spacing: 15) {
+                    Image(systemName: "speaker.fill")
+                    Slider(value: $volume)
+                    Image(systemName: "speaker.wave.2.fill")
+                }
+                .padding()
+                HStack(spacing: 22) {
+                    Button(action: {}) {
+                        Image(systemName: "arrow.up.message")
+                    
+                            .font(.title2)
+                            .foregroundColor(.primary)
+                    }
+                    Button(action: {}) {
+                        Image(systemName: "airplayaudio")
+                    
+                            .font(.title2)
+                            .foregroundColor(.primary)
+                    }
+                    Button(action: {}) {
+                        Image(systemName: "list.bullet")
+                    
+                            .font(.title2)
+                            .foregroundColor(.primary)
+                    }
+                }
+                .padding(.bottom, safeArea?.bottom == 0 ? 15 : safeArea?.bottom)
             }
-            .frame(width: expand ? nil : 0, height: expand ? nil : 0)
+            .frame(height: expand ? nil : 0)
             .opacity(expand ? 1 : 0)
         }
         .frame(maxHeight: expand ? .infinity : 80)
@@ -104,12 +148,30 @@ struct MiniPlayer: View {
                 Divider()
             }
             .onTapGesture(perform: {
-                    withAnimation(.spring()) {
-                        expand.toggle()}
+                withAnimation(.spring()){expand = true}
                     })
             )
-        .ignoresSafeArea()
+        .cornerRadius(expand ? 20 : 0)
         .offset(y: expand ? 0 : -48)
+        .offset(y: offset)
+        .gesture(DragGesture().onEnded(onEnded(value:)).onChanged(onChanged(value:)))
+        .ignoresSafeArea()
+    }
+    
+    // restricts to when expanded
+    func onChanged(value: DragGesture.Value) {
+        if (value.translation.height > 0 && expand) {
+            offset = value.translation.height
+        }
+    }
+    
+    func onEnded(value: DragGesture.Value) {
+        withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.95, blendDuration: 0.95)) {
+            if value.translation.height > height {
+                expand = false
+            }
+            offset = 0
+        }
     }
 }
 
