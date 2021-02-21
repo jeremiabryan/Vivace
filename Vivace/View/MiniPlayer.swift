@@ -50,7 +50,7 @@ struct MiniPlayer: View {
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 if (!expand) {
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Image(syste      çmName: "play.fill")
+                        Image(systemName: "play.fill")
                             .font(.title2)
                             .foregroundColor(.primary)
                     })
