@@ -19,11 +19,11 @@ struct TabBar: View {
                content: {
         
                 TabView(selection: $current) {
-                    Text("Library")
+                    Playlists()
                         .tag(0)
                         .tabItem {
-                            Image(systemName: "rectangle.stack.fill")
-                            Text("Library")
+                            Image(systemName: "infinity")
+                            Text("Playlists")
                         }
                     Text("Radio")
                         .tag(1)

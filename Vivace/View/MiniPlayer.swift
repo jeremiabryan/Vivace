@@ -42,7 +42,7 @@ struct MiniPlayer: View {
                     .frame(width: expand ? height : 55, height: expand ? height: 55)
                     .cornerRadius(15)
                 if (!expand) {
-                    Text("Lady Gaga")
+                    Text("Now Playing")
                         .font(.title2)
                         .fontWeight(.bold)
                         .matchedGeometryEffect(id: "Label", in: animation)
@@ -50,7 +50,7 @@ struct MiniPlayer: View {
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 if (!expand) {
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Image(systemName: "play.fill")
+                        Image(syste      çmName: "play.fill")
                             .font(.title2)
                             .foregroundColor(.primary)
                     })

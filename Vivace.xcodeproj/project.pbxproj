@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8981802525E2D5EF009A3C20 /* Playlists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981802425E2D5EF009A3C20 /* Playlists.swift */; };
 		89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999525D0EA3200FF9206 /* VivaceApp.swift */; };
 		89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999725D0EA3200FF9206 /* ContentView.swift */; };
 		89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A1999925D0EA3300FF9206 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8981802425E2D5EF009A3C20 /* Playlists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlists.swift; sourceTree = "<group>"; };
 		89A1999225D0EA3200FF9206 /* Vivace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vivace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A1999525D0EA3200FF9206 /* VivaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaceApp.swift; sourceTree = "<group>"; };
 		89A1999725D0EA3200FF9206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				E078D01325D2654B00C128AB /* BlurView.swift */,
 				E078D01825D2722200C128AB /* MiniPlayer.swift */,
 				E0A1027925D63B9900367F56 /* Search.swift */,
+				8981802425E2D5EF009A3C20 /* Playlists.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */,
 				89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */,
 				E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */,
+				8981802525E2D5EF009A3C20 /* Playlists.swift in Sources */,
 				E0A1027A25D63B9900367F56 /* Search.swift in Sources */,
 				E078D00725D259C500C128AB /* TabBar.swift in Sources */,
 				E078D01425D2654B00C128AB /* BlurView.swift in Sources */,
