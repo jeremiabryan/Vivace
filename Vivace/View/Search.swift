@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Search: View {
-    
+    @State private var searchResults = [Song]()
     @State var search = ""
     var columns = Array(repeating: GridItem(.flexible(), spacing:20), count: 2)
     
@@ -42,6 +42,7 @@ struct Search: View {
                                    height: 180,
                                    alignment: .center)
                             .cornerRadius(15)
+                            
                             
                      
                     }

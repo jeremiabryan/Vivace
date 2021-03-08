@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct TabBar: View {
     
@@ -46,9 +47,29 @@ struct TabBar: View {
                         }
                     
                 }
+                // Let's decorate our TabView!
+                .accentColor(.pink)
+                // This lambda/EventListener/callback is triggered when the TabView is loaded.
+                // practically speaking, anything in here will run when the app 'loads'.
+                .onAppear() {
+                    // StoreKit (SK) request to access the user's media library
+                    SKCloudServiceController.requestAuthorization { (status) in
+                        // if the user authorizes access,
+                        if status == .authorized {
+                            // print the JSON payload
+                            // TODO: actual lib things here
+                            DispatchQueue.global(qos: .background).async {
+                               print(AppleMusicAPI().fetchStorefrontID())
+                                print(AppleMusicAPI().searchAppleMusic("Taylor Swift"))
+                                
+                            }
+            
+                        }
+                    }
+                }
                 MiniPlayer(animation: animation, expand: $expand)
+
                })
-        
-    }
+            }
     
 }
