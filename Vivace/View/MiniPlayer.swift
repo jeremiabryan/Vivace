@@ -29,9 +29,9 @@ struct MiniPlayer: View {
     @State var volume : CGFloat = 0
     @State var offset : CGFloat = 0
     var safeArea = UIApplication.shared.windows.first?.safeAreaInsets
+    @State static var songName = "---"
     
     var body: some View {
-        
         
         VStack {
             Capsule()
@@ -53,7 +53,7 @@ struct MiniPlayer: View {
                     .frame(width: expand ? height : 55, height: expand ? height: 55)
                     .cornerRadius(15)
                 if (!expand) {
-                    Text("Lady Gaga")
+                    Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
                         .font(.title2)
                         .fontWeight(.bold)
                         .matchedGeometryEffect(id: "Label", in: animation)
@@ -79,7 +79,7 @@ struct MiniPlayer: View {
                 
                 HStack {
                     if (expand) {
-                        Text("Lady Gaga")
+                        Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
                             .font(.title2)
                             .foregroundColor(.primary)
                             .fontWeight(.bold)
@@ -203,7 +203,9 @@ struct MiniPlayer: View {
     
     
     
-    
+    func setTitle(value:String) {
+        MiniPlayer.songName = value
+    }
     
 }
 
