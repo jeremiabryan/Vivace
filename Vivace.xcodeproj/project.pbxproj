@@ -19,6 +19,8 @@
 		E04EB40F25EF38740009A5DC /* AppleMusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB40E25EF38740009A5DC /* AppleMusicAPI.swift */; };
 		E04EB41425EF38A20009A5DC /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB41325EF38A20009A5DC /* Song.swift */; };
 		E04EB42325F6AA900009A5DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E04EB42225F6AA8F0009A5DC /* Localizable.strings */; };
+		E04EB43125F6AF340009A5DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E04EB43025F6AF340009A5DC /* Localizable.strings */; };
+		E04EB43625F8F02B0009A5DC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB43525F8F02B0009A5DC /* SearchView.swift */; };
 		E078D00725D259C500C128AB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D00625D259C500C128AB /* TabBar.swift */; };
 		E078D01425D2654B00C128AB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01325D2654B00C128AB /* BlurView.swift */; };
 		E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01825D2722200C128AB /* MiniPlayer.swift */; };
@@ -61,6 +63,8 @@
 		E04EB40E25EF38740009A5DC /* AppleMusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicAPI.swift; sourceTree = "<group>"; };
 		E04EB41325EF38A20009A5DC /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E04EB42225F6AA8F0009A5DC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E04EB43025F6AF340009A5DC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E04EB43525F8F02B0009A5DC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		E078D00625D259C500C128AB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		E078D01325D2654B00C128AB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		E078D01825D2722200C128AB /* MiniPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayer.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				E04EB40E25EF38740009A5DC /* AppleMusicAPI.swift */,
 				E04EB41325EF38A20009A5DC /* Song.swift */,
 				E04EB42225F6AA8F0009A5DC /* Localizable.strings */,
+				E04EB43025F6AF340009A5DC /* Localizable.strings */,
+				E04EB43525F8F02B0009A5DC /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E04EB42325F6AA900009A5DC /* Localizable.strings in Resources */,
+				E04EB43125F6AF340009A5DC /* Localizable.strings in Resources */,
 				89A1999D25D0EA3300FF9206 /* Preview Assets.xcassets in Resources */,
 				89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */,
 			);
@@ -302,6 +309,7 @@
 				89A199A225D0EA3300FF9206 /* Vivace.xcdatamodeld in Sources */,
 				89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */,
 				89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */,
+				E04EB43625F8F02B0009A5DC /* SearchView.swift in Sources */,
 				E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */,
 				E04EB41425EF38A20009A5DC /* Song.swift in Sources */,
 				E04EB40F25EF38740009A5DC /* AppleMusicAPI.swift in Sources */,

@@ -7,12 +7,14 @@
 
 import SwiftUI
 import StoreKit
+import MediaPlayer
 
 struct TabBar: View {
     
     @State var expand = false
     @Namespace var animation
-    
+    @State private var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
+    @State private var currentSong = Song(id: "", name: "", artistName: "", artworkURL: "")
     @State var current = 2
     var body: some View {
         
@@ -32,7 +34,7 @@ struct TabBar: View {
                             Image(systemName: "dot.radiowaves.left.and.right")
                             Text("Radio")
                         }
-                    Search()
+                    Search(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                         .tag(2)
                         .tabItem {
                             Image(systemName: "magnifyingglass")
@@ -44,6 +46,12 @@ struct TabBar: View {
                         .tabItem {
                             Image(systemName: "magnifyingglass")
                             Text("Current Source")
+                        }
+                    SearchView(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
+                        .tag(4)
+                        .tabItem {
+                            Image(systemName: "magnifyingglass")
+                            Text("SearchView")
                         }
                     
                 }

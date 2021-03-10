@@ -6,9 +6,16 @@
 //
 
 import SwiftUI
+import StoreKit
+import MediaPlayer
+
 
 struct Search: View {
+    @State private var searchText = ""
     @State private var searchResults = [Song]()
+    @Binding var musicPlayer: MPMusicPlayerController
+    @Binding var currentSong: Song
+    
     @State var search = ""
     var columns = Array(repeating: GridItem(.flexible(), spacing:20), count: 2)
     
@@ -33,6 +40,33 @@ struct Search: View {
                 .background(Color.primary.opacity(0.06))
                 .cornerRadius(15)
                 
+                
+                List {
+                                ForEach(searchResults, id:\.id) { song in
+                                    HStack {
+                                        
+                                        VStack(alignment: .leading) {
+                                            Text(song.name)
+                                                .font(.headline)
+                                            Text(song.artistName)
+                                                .font(.caption)
+                                                .foregroundColor(.secondary)
+                                        }
+                                        Spacer()
+                                        Button(action: {
+                                            self.currentSong = song
+                                            self.musicPlayer.setQueue(with: [song.id])
+                                            self.musicPlayer.play()
+                                        }) {
+                                            Image(systemName: "play.fill")
+                                                .foregroundColor(.pink)
+                                        }
+                                    }
+                                }
+                            }
+                            .accentColor(.pink)
+                        
+                
                 LazyVGrid(columns: columns, spacing:20) {
                     ForEach(1...10, id: \.self) {index in
                         Image("p\(index)")
@@ -56,8 +90,4 @@ struct Search: View {
     }
 }
 
-struct Search_Previews: PreviewProvider {
-    static var previews: some View {
-        Search()
-    }
-}
+

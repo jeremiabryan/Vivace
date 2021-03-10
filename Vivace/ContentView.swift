@@ -7,8 +7,11 @@
 
 import SwiftUI
 import CoreData
+import MediaPlayer
 
 struct ContentView: View {
+    @State private var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
+    @State private var currentSong = Song(id: "", name: "", artistName: "", artworkURL: "")
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
