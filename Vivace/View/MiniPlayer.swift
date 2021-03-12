@@ -116,9 +116,10 @@ struct MiniPlayer: View {
                         .font(.largeTitle)
                         .foregroundColor(.primary)
                         .onTapGesture(perform: {
+                            self.musicPlayer.pause()
+                            // self.musicPlayer.setQueue(with: ["1440935808"])
+                            // self.musicPlayer.play()
                             
-                            self.musicPlayer.setQueue(with: ["1440935808"])
-                            self.musicPlayer.play()
                         })
                     
                 }
@@ -132,12 +133,14 @@ struct MiniPlayer: View {
                 
                 HStack(spacing: 15) {
                     Image(systemName: "speaker.fill")
+                    
                     Slider(value: $volume)
                         .onTapGesture {
                             let volumeFloat = Float(volume)
                             MPVolumeView.setVolume(volumeFloat)
                             // use volume, extension at bottom, and this to have a shared volume variable
                         }
+                        // .onDrag(<#T##data: () -> NSItemProvider##() -> NSItemProvider#>)
                     
                         
                     Image(systemName: "speaker.wave.2.fill")
