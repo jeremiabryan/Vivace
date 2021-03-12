@@ -30,7 +30,7 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIImageName</key>
-		<string>AppIcon</string>
+		<string>VivaceLogo</string>
 		<key>UIColorName</key>
 		<string>launchScreenColor</string>
 	</dict>
