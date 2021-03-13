@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999525D0EA3200FF9206 /* VivaceApp.swift */; };
+		89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999725D0EA3200FF9206 /* ContentView.swift */; };
+		89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A1999925D0EA3300FF9206 /* Assets.xcassets */; };
+		89A1999D25D0EA3300FF9206 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A1999C25D0EA3300FF9206 /* Preview Assets.xcassets */; };
+		89A1999F25D0EA3300FF9206 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999E25D0EA3300FF9206 /* Persistence.swift */; };
+		89A199A225D0EA3300FF9206 /* Vivace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89A199A025D0EA3300FF9206 /* Vivace.xcdatamodeld */; };
+		89A199AD25D0EA3300FF9206 /* VivaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A199AC25D0EA3300FF9206 /* VivaceTests.swift */; };
+		89A199B825D0EA3300FF9206 /* VivaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A199B725D0EA3300FF9206 /* VivaceUITests.swift */; };
+		E009047625FC4C4D00F3287D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E009047525FC4C4D00F3287D /* Localizable.strings */; };
+		E04EB40A25EF38320009A5DC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB40925EF38310009A5DC /* SwiftyJSON.swift */; };
+		E04EB40F25EF38740009A5DC /* AppleMusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB40E25EF38740009A5DC /* AppleMusicAPI.swift */; };
+		E04EB41425EF38A20009A5DC /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB41325EF38A20009A5DC /* Song.swift */; };
+		E04EB43625F8F02B0009A5DC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB43525F8F02B0009A5DC /* SearchView.swift */; };
+		E078D00725D259C500C128AB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D00625D259C500C128AB /* TabBar.swift */; };
+		E078D01425D2654B00C128AB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01325D2654B00C128AB /* BlurView.swift */; };
+		E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01825D2722200C128AB /* MiniPlayer.swift */; };
+		E0A1027A25D63B9900367F56 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1027925D63B9900367F56 /* Search.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89A199A925D0EA3300FF9206 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89A1998A25D0EA3200FF9206 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89A1999125D0EA3200FF9206;
+			remoteInfo = Vivace;
+		};
+		89A199B425D0EA3300FF9206 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89A1998A25D0EA3200FF9206 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89A1999125D0EA3200FF9206;
+			remoteInfo = Vivace;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		89A1999225D0EA3200FF9206 /* Vivace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vivace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89A1999525D0EA3200FF9206 /* VivaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaceApp.swift; sourceTree = "<group>"; };
+		89A1999725D0EA3200FF9206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		89A1999925D0EA3300FF9206 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89A1999C25D0EA3300FF9206 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		89A1999E25D0EA3300FF9206 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		89A199A125D0EA3300FF9206 /* Vivace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vivace.xcdatamodel; sourceTree = "<group>"; };
+		89A199A325D0EA3300FF9206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89A199A825D0EA3300FF9206 /* VivaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89A199AC25D0EA3300FF9206 /* VivaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaceTests.swift; sourceTree = "<group>"; };
+		89A199AE25D0EA3300FF9206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89A199B325D0EA3300FF9206 /* VivaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89A199B725D0EA3300FF9206 /* VivaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaceUITests.swift; sourceTree = "<group>"; };
+		89A199B925D0EA3300FF9206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E009047525FC4C4D00F3287D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../../../../Downloads/Localizable.strings; sourceTree = "<group>"; };
+		E04EB40925EF38310009A5DC /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E04EB40E25EF38740009A5DC /* AppleMusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicAPI.swift; sourceTree = "<group>"; };
+		E04EB41325EF38A20009A5DC /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		E04EB43525F8F02B0009A5DC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E078D00625D259C500C128AB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		E078D01325D2654B00C128AB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		E078D01825D2722200C128AB /* MiniPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayer.swift; sourceTree = "<group>"; };
+		E0A1027925D63B9900367F56 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89A1998F25D0EA3200FF9206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89A199A525D0EA3300FF9206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89A199B025D0EA3300FF9206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89A1998925D0EA3200FF9206 = {
+			isa = PBXGroup;
+			children = (
+				89A1999425D0EA3200FF9206 /* Vivace */,
+				89A199AB25D0EA3300FF9206 /* VivaceTests */,
+				89A199B625D0EA3300FF9206 /* VivaceUITests */,
+				89A1999325D0EA3200FF9206 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89A1999325D0EA3200FF9206 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89A1999225D0EA3200FF9206 /* Vivace.app */,
+				89A199A825D0EA3300FF9206 /* VivaceTests.xctest */,
+				89A199B325D0EA3300FF9206 /* VivaceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89A1999425D0EA3200FF9206 /* Vivace */ = {
+			isa = PBXGroup;
+			children = (
+				E078D00525D258AA00C128AB /* View */,
+				89A1999525D0EA3200FF9206 /* VivaceApp.swift */,
+				89A1999725D0EA3200FF9206 /* ContentView.swift */,
+				89A1999925D0EA3300FF9206 /* Assets.xcassets */,
+				89A1999E25D0EA3300FF9206 /* Persistence.swift */,
+				89A199A325D0EA3300FF9206 /* Info.plist */,
+				89A199A025D0EA3300FF9206 /* Vivace.xcdatamodeld */,
+				89A1999B25D0EA3300FF9206 /* Preview Content */,
+			);
+			path = Vivace;
+			sourceTree = "<group>";
+		};
+		89A1999B25D0EA3300FF9206 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				89A1999C25D0EA3300FF9206 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		89A199AB25D0EA3300FF9206 /* VivaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				89A199AC25D0EA3300FF9206 /* VivaceTests.swift */,
+				89A199AE25D0EA3300FF9206 /* Info.plist */,
+			);
+			path = VivaceTests;
+			sourceTree = "<group>";
+		};
+		89A199B625D0EA3300FF9206 /* VivaceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				89A199B725D0EA3300FF9206 /* VivaceUITests.swift */,
+				89A199B925D0EA3300FF9206 /* Info.plist */,
+			);
+			path = VivaceUITests;
+			sourceTree = "<group>";
+		};
+		E078D00525D258AA00C128AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E009047525FC4C4D00F3287D /* Localizable.strings */,
+				E04EB40925EF38310009A5DC /* SwiftyJSON.swift */,
+				E078D00625D259C500C128AB /* TabBar.swift */,
+				E078D01325D2654B00C128AB /* BlurView.swift */,
+				E078D01825D2722200C128AB /* MiniPlayer.swift */,
+				E0A1027925D63B9900367F56 /* Search.swift */,
+				E04EB40E25EF38740009A5DC /* AppleMusicAPI.swift */,
+				E04EB41325EF38A20009A5DC /* Song.swift */,
+				E04EB43525F8F02B0009A5DC /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89A1999125D0EA3200FF9206 /* Vivace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89A199BC25D0EA3300FF9206 /* Build configuration list for PBXNativeTarget "Vivace" */;
+			buildPhases = (
+				89A1998E25D0EA3200FF9206 /* Sources */,
+				89A1998F25D0EA3200FF9206 /* Frameworks */,
+				89A1999025D0EA3200FF9206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vivace;
+			productName = Vivace;
+			productReference = 89A1999225D0EA3200FF9206 /* Vivace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		89A199A725D0EA3300FF9206 /* VivaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89A199BF25D0EA3300FF9206 /* Build configuration list for PBXNativeTarget "VivaceTests" */;
+			buildPhases = (
+				89A199A425D0EA3300FF9206 /* Sources */,
+				89A199A525D0EA3300FF9206 /* Frameworks */,
+				89A199A625D0EA3300FF9206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89A199AA25D0EA3300FF9206 /* PBXTargetDependency */,
+			);
+			name = VivaceTests;
+			productName = VivaceTests;
+			productReference = 89A199A825D0EA3300FF9206 /* VivaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		89A199B225D0EA3300FF9206 /* VivaceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89A199C225D0EA3300FF9206 /* Build configuration list for PBXNativeTarget "VivaceUITests" */;
+			buildPhases = (
+				89A199AF25D0EA3300FF9206 /* Sources */,
+				89A199B025D0EA3300FF9206 /* Frameworks */,
+				89A199B125D0EA3300FF9206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89A199B525D0EA3300FF9206 /* PBXTargetDependency */,
+			);
+			name = VivaceUITests;
+			productName = VivaceUITests;
+			productReference = 89A199B325D0EA3300FF9206 /* VivaceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89A1998A25D0EA3200FF9206 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					89A1999125D0EA3200FF9206 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					89A199A725D0EA3300FF9206 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 89A1999125D0EA3200FF9206;
+					};
+					89A199B225D0EA3300FF9206 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 89A1999125D0EA3200FF9206;
+					};
+				};
+			};
+			buildConfigurationList = 89A1998D25D0EA3200FF9206 /* Build configuration list for PBXProject "Vivace" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89A1998925D0EA3200FF9206;
+			productRefGroup = 89A1999325D0EA3200FF9206 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89A1999125D0EA3200FF9206 /* Vivace */,
+				89A199A725D0EA3300FF9206 /* VivaceTests */,
+				89A199B225D0EA3300FF9206 /* VivaceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89A1999025D0EA3200FF9206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A1999D25D0EA3300FF9206 /* Preview Assets.xcassets in Resources */,
+				E009047625FC4C4D00F3287D /* Localizable.strings in Resources */,
+				89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89A199A625D0EA3300FF9206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89A199B125D0EA3300FF9206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89A1998E25D0EA3200FF9206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A1999F25D0EA3300FF9206 /* Persistence.swift in Sources */,
+				89A199A225D0EA3300FF9206 /* Vivace.xcdatamodeld in Sources */,
+				89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */,
+				89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */,
+				E04EB43625F8F02B0009A5DC /* SearchView.swift in Sources */,
+				E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */,
+				E04EB41425EF38A20009A5DC /* Song.swift in Sources */,
+				E04EB40F25EF38740009A5DC /* AppleMusicAPI.swift in Sources */,
+				E0A1027A25D63B9900367F56 /* Search.swift in Sources */,
+				E04EB40A25EF38320009A5DC /* SwiftyJSON.swift in Sources */,
+				E078D00725D259C500C128AB /* TabBar.swift in Sources */,
+				E078D01425D2654B00C128AB /* BlurView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89A199A425D0EA3300FF9206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A199AD25D0EA3300FF9206 /* VivaceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89A199AF25D0EA3300FF9206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89A199B825D0EA3300FF9206 /* VivaceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89A199AA25D0EA3300FF9206 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89A1999125D0EA3200FF9206 /* Vivace */;
+			targetProxy = 89A199A925D0EA3300FF9206 /* PBXContainerItemProxy */;
+		};
+		89A199B525D0EA3300FF9206 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89A1999125D0EA3200FF9206 /* Vivace */;
+			targetProxy = 89A199B425D0EA3300FF9206 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		89A199BA25D0EA3300FF9206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		89A199BB25D0EA3300FF9206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89A199BD25D0EA3300FF9206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Vivace/Preview Content\"";
+				DEVELOPMENT_TEAM = C2R23HEATK;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Vivace/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vivace-GGC.Vivace";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89A199BE25D0EA3300FF9206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Vivace/Preview Content\"";
+				DEVELOPMENT_TEAM = C2R23HEATK;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Vivace/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vivace-GGC.Vivace";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		89A199C025D0EA3300FF9206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2R23HEATK;
+				INFOPLIST_FILE = VivaceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vivace-GGC.VivaceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vivace.app/Vivace";
+			};
+			name = Debug;
+		};
+		89A199C125D0EA3300FF9206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2R23HEATK;
+				INFOPLIST_FILE = VivaceTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vivace-GGC.VivaceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vivace.app/Vivace";
+			};
+			name = Release;
+		};
+		89A199C325D0EA3300FF9206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2R23HEATK;
+				INFOPLIST_FILE = VivaceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vivace-GGC.VivaceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vivace;
+			};
+			name = Debug;
+		};
+		89A199C425D0EA3300FF9206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2R23HEATK;
+				INFOPLIST_FILE = VivaceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vivace-GGC.VivaceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vivace;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89A1998D25D0EA3200FF9206 /* Build configuration list for PBXProject "Vivace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89A199BA25D0EA3300FF9206 /* Debug */,
+				89A199BB25D0EA3300FF9206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89A199BC25D0EA3300FF9206 /* Build configuration list for PBXNativeTarget "Vivace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89A199BD25D0EA3300FF9206 /* Debug */,
+				89A199BE25D0EA3300FF9206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89A199BF25D0EA3300FF9206 /* Build configuration list for PBXNativeTarget "VivaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89A199C025D0EA3300FF9206 /* Debug */,
+				89A199C125D0EA3300FF9206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89A199C225D0EA3300FF9206 /* Build configuration list for PBXNativeTarget "VivaceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89A199C325D0EA3300FF9206 /* Debug */,
+				89A199C425D0EA3300FF9206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		89A199A025D0EA3300FF9206 /* Vivace.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				89A199A125D0EA3300FF9206 /* Vivace.xcdatamodel */,
+			);
+			currentVersion = 89A199A125D0EA3300FF9206 /* Vivace.xcdatamodel */;
+			path = Vivace.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 89A1998A25D0EA3200FF9206 /* Project object */;
+}
