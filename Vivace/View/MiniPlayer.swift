@@ -17,9 +17,6 @@ import CoreGraphics
 let volumeView = MPVolumeView()
 
 struct MiniPlayer: View {
-  
-   
-    
     
     var height = UIScreen.main.bounds.height / 3
     var animation: Namespace.ID
@@ -119,7 +116,6 @@ struct MiniPlayer: View {
                             self.musicPlayer.pause()
                             // self.musicPlayer.setQueue(with: ["1440935808"])
                             // self.musicPlayer.play()
-                            
                         })
                     
                 }
