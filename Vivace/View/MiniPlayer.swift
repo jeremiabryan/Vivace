@@ -17,6 +17,7 @@ import CoreGraphics
 let volumeView = MPVolumeView()
 
 struct MiniPlayer: View {
+    @State var playerPaused = true
     
     var height = UIScreen.main.bounds.height / 3
     var animation: Namespace.ID
@@ -57,14 +58,40 @@ struct MiniPlayer: View {
                 }
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 if (!expand) {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Image(systemName: "play.fill")
-                            .font(.title2)
+                    Button(action: self.musicPlayer.skipToPreviousItem, label: {
+                        Image(systemName: "backward.fill")
+                            .font(.largeTitle)
                             .foregroundColor(.primary)
                     })
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+// Mini Player music actions: backward skip, play/pause, and forward skip
+                    Button(action: {
+                          self.playerPaused.toggle()
+                          if self.playerPaused {
+                            self.musicPlayer.pause()
+                          }
+                          else {
+                            self.musicPlayer.play()
+                          }
+                        }) {
+                          Image(systemName: playerPaused ? "play.fill" : "pause.fill")
+                            .font(.largeTitle)
+                            .foregroundColor(.primary)
+                        }
+//                    Button(action: self.musicPlayer.play, label: {
+//                        Image(systemName: "play.fill")
+//                            .font(.largeTitle)
+//                            .foregroundColor(.primary)
+//                    })
+//
+//                    Button(action: self.musicPlayer.pause, label: {
+//                        Image(systemName: "pause.fill")
+//                            .font(.largeTitle)
+//                            .foregroundColor(.primary)
+//                    })
+//
+                    Button(action: self.musicPlayer.skipToNextItem, label: {
                         Image(systemName: "forward.fill")
-                            .font(.title2)
+                            .font(.largeTitle)
                             .foregroundColor(.primary)
                     })
                 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8961B08425FC897800525761 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8961B08325FC897800525761 /* Localizable.strings */; };
 		89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999525D0EA3200FF9206 /* VivaceApp.swift */; };
 		89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999725D0EA3200FF9206 /* ContentView.swift */; };
 		89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A1999925D0EA3300FF9206 /* Assets.xcassets */; };
@@ -15,7 +16,6 @@
 		89A199A225D0EA3300FF9206 /* Vivace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89A199A025D0EA3300FF9206 /* Vivace.xcdatamodeld */; };
 		89A199AD25D0EA3300FF9206 /* VivaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A199AC25D0EA3300FF9206 /* VivaceTests.swift */; };
 		89A199B825D0EA3300FF9206 /* VivaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A199B725D0EA3300FF9206 /* VivaceUITests.swift */; };
-		E009047625FC4C4D00F3287D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E009047525FC4C4D00F3287D /* Localizable.strings */; };
 		E04EB40A25EF38320009A5DC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB40925EF38310009A5DC /* SwiftyJSON.swift */; };
 		E04EB40F25EF38740009A5DC /* AppleMusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB40E25EF38740009A5DC /* AppleMusicAPI.swift */; };
 		E04EB41425EF38A20009A5DC /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EB41325EF38A20009A5DC /* Song.swift */; };
@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8961B08325FC897800525761 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		89A1999225D0EA3200FF9206 /* Vivace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vivace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A1999525D0EA3200FF9206 /* VivaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaceApp.swift; sourceTree = "<group>"; };
 		89A1999725D0EA3200FF9206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		89A199B325D0EA3300FF9206 /* VivaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A199B725D0EA3300FF9206 /* VivaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaceUITests.swift; sourceTree = "<group>"; };
 		89A199B925D0EA3300FF9206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E009047525FC4C4D00F3287D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../../../../Downloads/Localizable.strings; sourceTree = "<group>"; };
 		E04EB40925EF38310009A5DC /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		E04EB40E25EF38740009A5DC /* AppleMusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicAPI.swift; sourceTree = "<group>"; };
 		E04EB41325EF38A20009A5DC /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		E078D00525D258AA00C128AB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E009047525FC4C4D00F3287D /* Localizable.strings */,
+				8961B08325FC897800525761 /* Localizable.strings */,
 				E04EB40925EF38310009A5DC /* SwiftyJSON.swift */,
 				E078D00625D259C500C128AB /* TabBar.swift */,
 				E078D01325D2654B00C128AB /* BlurView.swift */,
@@ -275,7 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89A1999D25D0EA3300FF9206 /* Preview Assets.xcassets in Resources */,
-				E009047625FC4C4D00F3287D /* Localizable.strings in Resources */,
+				8961B08425FC897800525761 /* Localizable.strings in Resources */,
 				89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -454,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -479,10 +479,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Vivace-GGC.Vivace";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vivace.GGC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -501,10 +501,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Vivace-GGC.Vivace";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vivace.GGC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
