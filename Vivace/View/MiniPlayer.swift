@@ -11,14 +11,22 @@
 // Worst case scenario, compress the GUI for all device builds.
 
 import SwiftUI
+import MediaPlayer
+import CoreGraphics
+
+let volumeView = MPVolumeView()
 
 struct MiniPlayer: View {
+    
     var height = UIScreen.main.bounds.height / 3
     var animation: Namespace.ID
+    // @State means it can be passed on to other views!
+    @State private var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
     @Binding var expand : Bool
     @State var volume : CGFloat = 0
     @State var offset : CGFloat = 0
     var safeArea = UIApplication.shared.windows.first?.safeAreaInsets
+    @State static var songName = "---"
     
     var body: some View {
         
@@ -42,7 +50,7 @@ struct MiniPlayer: View {
                     .frame(width: expand ? height : 55, height: expand ? height: 55)
                     .cornerRadius(15)
                 if (!expand) {
-                    Text("Now Playing")
+                    Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
                         .font(.title2)
                         .fontWeight(.bold)
                         .matchedGeometryEffect(id: "Label", in: animation)
@@ -68,7 +76,7 @@ struct MiniPlayer: View {
                 
                 HStack {
                     if (expand) {
-                        Text("Lady Gaga")
+                        Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
                             .font(.title2)
                             .foregroundColor(.primary)
                             .fontWeight(.bold)
@@ -104,15 +112,33 @@ struct MiniPlayer: View {
                     Image(systemName: "stop.fill")
                         .font(.largeTitle)
                         .foregroundColor(.primary)
+                        .onTapGesture(perform: {
+                            self.musicPlayer.pause()
+                            // self.musicPlayer.setQueue(with: ["1440935808"])
+                            // self.musicPlayer.play()
+                        })
                     
                 }
                 .padding()
                 
                 Spacer(minLength: 0)
+               
+               
+                
+                
                 
                 HStack(spacing: 15) {
                     Image(systemName: "speaker.fill")
+                    
                     Slider(value: $volume)
+                        .onTapGesture {
+                            let volumeFloat = Float(volume)
+                            MPVolumeView.setVolume(volumeFloat)
+                            // use volume, extension at bottom, and this to have a shared volume variable
+                        }
+                        // .onDrag(<#T##data: () -> NSItemProvider##() -> NSItemProvider#>)
+                    
+                        
                     Image(systemName: "speaker.wave.2.fill")
                 }
                 .padding()
@@ -173,6 +199,24 @@ struct MiniPlayer: View {
             offset = 0
         }
     }
+    
+    
+    
+    func setTitle(value:String) {
+        MiniPlayer.songName = value
+    }
+    
+}
+
+extension MPVolumeView {
+  static func setVolume(_ volume: Float) {
+    let volumeView = MPVolumeView()
+    let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
+
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+      slider?.value = volume
+    }
+  }
 }
 
 
