@@ -77,18 +77,7 @@ struct MiniPlayer: View {
                             .font(.largeTitle)
                             .foregroundColor(.primary)
                         }
-//                    Button(action: self.musicPlayer.play, label: {
-//                        Image(systemName: "play.fill")
-//                            .font(.largeTitle)
-//                            .foregroundColor(.primary)
-//                    })
-//
-//                    Button(action: self.musicPlayer.pause, label: {
-//                        Image(systemName: "pause.fill")
-//                            .font(.largeTitle)
-//                            .foregroundColor(.primary)
-//                    })
-//
+
                     Button(action: self.musicPlayer.skipToNextItem, label: {
                         Image(systemName: "forward.fill")
                             .font(.largeTitle)
@@ -103,11 +92,22 @@ struct MiniPlayer: View {
                 
                 HStack {
                     if (expand) {
+                    VStack {
+                            
                         Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
-                            .font(.title2)
+                            .font(.title)
                             .foregroundColor(.primary)
                             .fontWeight(.bold)
                             .matchedGeometryEffect(id: "Label", in: animation)
+                           // .multilineTextAlignment(.leading)
+                        
+                        Text(self.musicPlayer.nowPlayingItem?.artist ?? "Not Playing")
+                            .font(.title3)
+                            .foregroundColor(.primary)
+                            //.fontWeight(.bold)
+                            .matchedGeometryEffect(id: "Label1", in: animation)
+                           .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                    }
                     }
                     Spacer(minLength: 0)
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -135,16 +135,32 @@ struct MiniPlayer: View {
                 }
                 .padding()
                 
-                Button(action: {}) {
-                    Image(systemName: "stop.fill")
+                Button(action: self.musicPlayer.skipToPreviousItem, label: {
+                    Image(systemName: "backward.fill")
                         .font(.largeTitle)
                         .foregroundColor(.primary)
-                        .onTapGesture(perform: {
-                            self.musicPlayer.pause()
-                            // self.musicPlayer.setQueue(with: ["1440935808"])
-                            // self.musicPlayer.play()
-                        })
-                    
+                })
+// regular music Player music actions: backward skip, play/pause, and forward skip
+                HStack {
+                Button(action: {
+                      self.playerPaused.toggle()
+                      if self.playerPaused {
+                        self.musicPlayer.pause()
+                      }
+                      else {
+                        self.musicPlayer.play()
+                      }
+                    }) {
+                      Image(systemName: playerPaused ? "play.fill" : "pause.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(.primary)
+                    }
+
+                Button(action: self.musicPlayer.skipToNextItem, label: {
+                    Image(systemName: "forward.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(.primary)
+                })
                 }
                 .padding()
                 

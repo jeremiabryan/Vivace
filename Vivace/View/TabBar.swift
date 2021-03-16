@@ -51,7 +51,7 @@ struct TabBar: View {
                         .tag(4)
                         .tabItem {
                             Image(systemName: "magnifyingglass")
-                            Text("SearchView")
+                            Text("Search")
                         }
                     
                 }
