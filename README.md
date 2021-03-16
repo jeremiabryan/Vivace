@@ -23,4 +23,7 @@ Our big upcoming feature will be allowing transferring playlists between Apple M
 * App stops responding when results do not appear
 * special characters crash application
 
+
+### Created by Jeremia Reyes, Devin Rogers, and Carlos Lopez
+
 Apple Music and iCloud are registered trademarks of Apple Inc.
