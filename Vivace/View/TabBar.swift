@@ -75,7 +75,7 @@ struct TabBar: View {
                         }
                     }
                 }
-                MiniPlayer(animation: animation, expand: $expand)
+                MiniPlayer(animation: animation, expand: $expand, currentSong: self.$currentSong)
 
                })
             }

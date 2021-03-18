@@ -13,6 +13,7 @@
 import SwiftUI
 import MediaPlayer
 import CoreGraphics
+import SDWebImageSwiftUI
 
 let volumeView = MPVolumeView()
 
@@ -28,6 +29,8 @@ struct MiniPlayer: View {
     @State var offset : CGFloat = 0
     var safeArea = UIApplication.shared.windows.first?.safeAreaInsets
     @State static var songName = "---"
+    @Binding var currentSong: Song
+    
     
     var body: some View {
         
@@ -43,13 +46,21 @@ struct MiniPlayer: View {
                 
                 if expand {
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
+                    
                 }
+                
                 
                 Image("pic")
                     .resizable()
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                     .frame(width: expand ? height : 55, height: expand ? height: 55)
                     .cornerRadius(15)
+                WebImage(url: URL(string: self.currentSong.artworkURL.replacingOccurrences(of: "{w}", with: "\(Int(24) * 2)").replacingOccurrences(of: "{h}", with: "\(Int(24) * 2)")))
+                                    .resizable()
+                                    .frame(width: 24, height: 24)
+                                    .cornerRadius(20)
+                                    .shadow(radius: 10)
+                                
                 if (!expand) {
                     Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
                         .font(.title2)
