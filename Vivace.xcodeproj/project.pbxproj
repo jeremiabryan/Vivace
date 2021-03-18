@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8961B08425FC897800525761 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8961B08325FC897800525761 /* Localizable.strings */; };
 		8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8987E7052603E2A20024AF2C /* PlaylistsView.swift */; };
+		8987E7092603F8500024AF2C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8987E7082603F8500024AF2C /* SDWebImageSwiftUI */; };
 		89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999525D0EA3200FF9206 /* VivaceApp.swift */; };
 		89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999725D0EA3200FF9206 /* ContentView.swift */; };
 		89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A1999925D0EA3300FF9206 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8987E7092603F8500024AF2C /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +192,9 @@
 			dependencies = (
 			);
 			name = Vivace;
+			packageProductDependencies = (
+				8987E7082603F8500024AF2C /* SDWebImageSwiftUI */,
+			);
 			productName = Vivace;
 			productReference = 89A1999225D0EA3200FF9206 /* Vivace.app */;
 			productType = "com.apple.product-type.application";
@@ -261,6 +266,9 @@
 				Base,
 			);
 			mainGroup = 89A1998925D0EA3200FF9206;
+			packageReferences = (
+				8987E7072603F8500024AF2C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 89A1999325D0EA3200FF9206 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -636,6 +644,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8987E7072603F8500024AF2C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8987E7082603F8500024AF2C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8987E7072603F8500024AF2C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		89A199A025D0EA3300FF9206 /* Vivace.xcdatamodeld */ = {
