@@ -118,8 +118,7 @@ struct MiniPlayer: View {
                             .foregroundColor(.primary)
                             .fontWeight(.bold)
                             .matchedGeometryEffect(id: "Label", in: animation)
-                           // .multilineTextAlignment(.leading)
-                        
+                           
                         Text(self.musicPlayer.nowPlayingItem?.artist ?? "Not Playing")
                             .font(.title3)
                             .foregroundColor(.primary)
@@ -153,14 +152,15 @@ struct MiniPlayer: View {
                     
                 }
                 .padding()
-                
+              
+                HStack {
+                // regular music Player music actions: backward skip, play/pause, and forward skip
                 Button(action: self.musicPlayer.skipToPreviousItem, label: {
                     Image(systemName: "backward.fill")
-                        .font(.largeTitle)
                         .foregroundColor(.primary)
+                        .font(.system(size: 45))
                 })
-// regular music Player music actions: backward skip, play/pause, and forward skip
-                HStack {
+                    
                 Button(action: {
                       self.playerPaused.toggle()
                       if self.playerPaused {
@@ -171,13 +171,13 @@ struct MiniPlayer: View {
                       }
                     }) {
                       Image(systemName: playerPaused ? "play.fill" : "pause.fill")
-                        .font(.largeTitle)
+                        .font(.system(size: 45))
                         .foregroundColor(.primary)
                     }
 
                 Button(action: self.musicPlayer.skipToNextItem, label: {
                     Image(systemName: "forward.fill")
-                        .font(.largeTitle)
+                        .font(.system(size: 45))
                         .foregroundColor(.primary)
                 })
                 }
