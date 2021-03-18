@@ -13,6 +13,9 @@ Our big upcoming feature will be allowing transferring playlists between Apple M
 * Active Apple Music subscription
 * Xcode 12.x (developed using versions 12.4 and 12.5)
 
+## Dependencies
+* https://github.com/SDWebImage/SDWebImageSwiftUI
+
 ## Known Issues
 
 * Music player repeats until stopped
