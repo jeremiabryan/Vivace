@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8961B08425FC897800525761 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8961B08325FC897800525761 /* Localizable.strings */; };
+		8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8987E7052603E2A20024AF2C /* PlaylistsView.swift */; };
 		89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999525D0EA3200FF9206 /* VivaceApp.swift */; };
 		89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999725D0EA3200FF9206 /* ContentView.swift */; };
 		89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A1999925D0EA3300FF9206 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		8961B08325FC897800525761 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8987E7052603E2A20024AF2C /* PlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsView.swift; sourceTree = "<group>"; };
 		89A1999225D0EA3200FF9206 /* Vivace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vivace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A1999525D0EA3200FF9206 /* VivaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaceApp.swift; sourceTree = "<group>"; };
 		89A1999725D0EA3200FF9206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				E04EB40E25EF38740009A5DC /* AppleMusicAPI.swift */,
 				E04EB41325EF38A20009A5DC /* Song.swift */,
 				E04EB43525F8F02B0009A5DC /* SearchView.swift */,
+				8987E7052603E2A20024AF2C /* PlaylistsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				E0A1027A25D63B9900367F56 /* Search.swift in Sources */,
 				E04EB40A25EF38320009A5DC /* SwiftyJSON.swift in Sources */,
 				E078D00725D259C500C128AB /* TabBar.swift in Sources */,
+				8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */,
 				E078D01425D2654B00C128AB /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

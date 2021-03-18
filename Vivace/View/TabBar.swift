@@ -28,11 +28,11 @@ struct TabBar: View {
                             Image(systemName: "rectangle.stack.fill")
                             Text("Library")
                         }
-                    Text("Radio")
+                    PlaylistsView()
                         .tag(1)
                         .tabItem {
-                            Image(systemName: "dot.radiowaves.left.and.right")
-                            Text("Radio")
+                            Image(systemName: "music.note.list")
+                            Text("Playlists")
                         }
                     Search(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                         .tag(2)
