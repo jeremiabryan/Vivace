@@ -52,6 +52,7 @@ struct MiniPlayer: View {
                                         .replacingOccurrences(of: "{h}",
                                                               with: "\(600)")))
                                         .resizable()
+                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                         .frame(width: 55, height: 55)
                                         .cornerRadius(20)
                                         .shadow(radius: 10)
