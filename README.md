@@ -10,7 +10,7 @@ Our big upcoming feature will be allowing transferring playlists between Apple M
 First, open Xcode and clone this project. 
 * Before this project will run, you'll need to add the dependencies. Go to File > Swift Packages > Add Package Dependency... and copy the dependencies from the Dependencies section of this README. 
 * Next, you'll need to create the Localizable.strings file for your developer token. This assumes you have a developer account through Apple and have generated an Apple Music authorization-capable token. Go to File > New > File... and select Strings file. Name it Localizable.strings. In the file, type:
-* "developerToken" = "<insert token here>";
+* "developerToken" = "insert token here";
 * This app should now authenticate users. As usual, do NOT share this file or token. It is added to the .gitignore, so it shouldn't upload on your clone.
 
 ## Requirements
