@@ -46,23 +46,24 @@ struct MiniPlayer: View {
                 
                 if expand {
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
-                    WebImage(url: URL(string: self.currentSong.artworkURL
-                                        .replacingOccurrences(of: "{w}",
-                                                              with: "\(600)")
-                                        .replacingOccurrences(of: "{h}",
-                                                              with: "\(600)")))
-                                        .resizable()
-                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                                        .frame(width: 55, height: 55)
-                                        .cornerRadius(20)
-                                        .shadow(radius: 10)
-                                    
+                    
                 }
-                Image("pic")
-                    .resizable()
+//                Image("pic")
+//                    .resizable()
+//                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+//                    .frame(width: expand ? height : 55, height: expand ? height: 55)
+//                    .cornerRadius(15)
+                WebImage(url: URL(string: self.currentSong.artworkURL
+                                    .replacingOccurrences(of: "{w}",
+                                                          with: "\(600)")
+                                    .replacingOccurrences(of: "{h}",
+                                                          with: "\(600)")))
+                                    .resizable()
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                    .frame(width: expand ? height : 55, height: expand ? height: 55)
-                    .cornerRadius(15)
+                    .frame(width: expand ? height: 55, height: expand ? height: 55)
+                                    .cornerRadius(20)
+                                    .shadow(radius: 10)
+                                
                 WebImage(url: URL(string: self.currentSong.artworkURL
                                     .replacingOccurrences(of: "{w}", with: "\(Int(24) * 2)")
                                     .replacingOccurrences(of: "{h}", with: "\(Int(24) * 2)"))
