@@ -8,6 +8,7 @@
 import SwiftUI
 import StoreKit
 import MediaPlayer
+import SDWebImageSwiftUI
 
 
 struct SearchView: View {
@@ -41,6 +42,12 @@ struct SearchView: View {
             List {
                 ForEach(searchResults, id:\.id) { song in
                     HStack {
+                        
+                        WebImage(url: URL(string: song.artworkURL.replacingOccurrences(of: "{w}", with: "80").replacingOccurrences(of: "{h}", with: "80")))
+                                                    .resizable()
+                                                    .frame(width: 40, height: 40)
+                                                    .cornerRadius(5)
+                                                    .shadow(radius: 2)
                         
                         VStack(alignment: .leading) {
                             Text(song.name)

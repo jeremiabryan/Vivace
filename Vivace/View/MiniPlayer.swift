@@ -48,11 +48,7 @@ struct MiniPlayer: View {
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                     
                 }
-//                Image("pic")
-//                    .resizable()
-//                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-//                    .frame(width: expand ? height : 55, height: expand ? height: 55)
-//                    .cornerRadius(15)
+
                 WebImage(url: URL(string: self.currentSong.artworkURL
                                     .replacingOccurrences(of: "{w}",
                                                           with: "\(600)")
