@@ -100,12 +100,13 @@ struct MiniPlayer: View {
             }
             .padding(.horizontal)
             
-            VStack(spacing: 15) {
-                Spacer(minLength: 0)
+            VStack (spacing: 15) {
+                Spacer (minLength: 0)
                 
                 HStack {
                     if (expand) {
-                    VStack {
+                    
+                        VStack {
                             
                         Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
                             .font(.title)
@@ -185,19 +186,14 @@ struct MiniPlayer: View {
                 
                 HStack(spacing: 15) {
                     Image(systemName: "speaker.fill")
-                    
-                    Slider(value: $volume)
-                        .onTapGesture {
-                            let volumeFloat = Float(volume)
-                            MPVolumeView.setVolume(volumeFloat)
-                            // use volume, extension at bottom, and this to have a shared volume variable
-                        }
-                        // .onDrag(<#T##data: () -> NSItemProvider##() -> NSItemProvider#>)
-                    
                         
+                    VolumeSlider()
+                       //.frame(height: 40)
+                       //.padding(.horizontal)
                     Image(systemName: "speaker.wave.2.fill")
                 }
-                .padding()
+                
+               // .padding()
                 HStack(spacing: 22) {
                     Button(action: {}) {
                         Image(systemName: "arrow.up.message")
