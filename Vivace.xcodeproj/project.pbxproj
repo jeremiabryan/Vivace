@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E5967C2260401ED00AB3F7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5E5967C1260401ED00AB3F7F /* Settings.bundle */; };
+		5E5967C72604090F00AB3F7F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5967C62604090F00AB3F7F /* SettingsView.swift */; };
+		5E5967D22604157C00AB3F7F /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5967D12604157C00AB3F7F /* SettingsStoryboard.storyboard */; };
 		8961B08425FC897800525761 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8961B08325FC897800525761 /* Localizable.strings */; };
 		8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8987E7052603E2A20024AF2C /* PlaylistsView.swift */; };
 		8987E7092603F8500024AF2C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8987E7082603F8500024AF2C /* SDWebImageSwiftUI */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E5967C1260401ED00AB3F7F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = View/Settings.bundle; sourceTree = "<group>"; };
+		5E5967C62604090F00AB3F7F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5E5967D12604157C00AB3F7F /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		8961B08325FC897800525761 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8987E7052603E2A20024AF2C /* PlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsView.swift; sourceTree = "<group>"; };
 		89A1999225D0EA3200FF9206 /* Vivace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vivace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +129,10 @@
 			children = (
 				E078D00525D258AA00C128AB /* View */,
 				89A1999525D0EA3200FF9206 /* VivaceApp.swift */,
+				5E5967C1260401ED00AB3F7F /* Settings.bundle */,
+				5E5967C62604090F00AB3F7F /* SettingsView.swift */,
 				89A1999725D0EA3200FF9206 /* ContentView.swift */,
+				5E5967D12604157C00AB3F7F /* SettingsStoryboard.storyboard */,
 				89A1999925D0EA3300FF9206 /* Assets.xcassets */,
 				89A1999E25D0EA3300FF9206 /* Persistence.swift */,
 				89A199A325D0EA3300FF9206 /* Info.plist */,
@@ -285,7 +294,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5967D22604157C00AB3F7F /* SettingsStoryboard.storyboard in Resources */,
 				89A1999D25D0EA3300FF9206 /* Preview Assets.xcassets in Resources */,
+				5E5967C2260401ED00AB3F7F /* Settings.bundle in Resources */,
 				8961B08425FC897800525761 /* Localizable.strings in Resources */,
 				89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */,
 			);
@@ -312,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5967C72604090F00AB3F7F /* SettingsView.swift in Sources */,
 				89A1999F25D0EA3300FF9206 /* Persistence.swift in Sources */,
 				89A199A225D0EA3300FF9206 /* Vivace.xcdatamodeld in Sources */,
 				89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */,
