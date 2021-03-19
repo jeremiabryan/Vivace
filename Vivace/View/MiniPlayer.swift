@@ -71,17 +71,18 @@ struct MiniPlayer: View {
                                 
                 if (!expand) {
                     Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
-                        .font(.title2)
-                        .fontWeight(.bold)
+                        .font(.title3)
+                        //.fontWeight(.bold)
                         .matchedGeometryEffect(id: "Label", in: animation)
                 }
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 if (!expand) {
-                    Button(action: self.musicPlayer.skipToPreviousItem, label: {
-                        Image(systemName: "backward.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.primary)
-                    })
+//                    Button(action: self.musicPlayer.skipToPreviousItem, label: {
+//                        Image(systemName: "backward.fill")
+//                            .font(.system(size: 30))
+//                            .foregroundColor(.primary)
+//                    })
+                    
 // Mini Player music actions: backward skip, play/pause, and forward skip
                     Button(action: {
                           self.playerPaused.toggle()
@@ -93,13 +94,13 @@ struct MiniPlayer: View {
                           }
                         }) {
                           Image(systemName: playerPaused ? "play.fill" : "pause.fill")
-                            .font(.largeTitle)
+                            .font(.system(size: 30))
                             .foregroundColor(.primary)
                         }
 
                     Button(action: self.musicPlayer.skipToNextItem, label: {
                         Image(systemName: "forward.fill")
-                            .font(.largeTitle)
+                            .font(.system(size: 30))
                             .foregroundColor(.primary)
                     })
                 }
@@ -158,7 +159,7 @@ struct MiniPlayer: View {
                 Button(action: self.musicPlayer.skipToPreviousItem, label: {
                     Image(systemName: "backward.fill")
                         .foregroundColor(.primary)
-                        .font(.system(size: 45))
+                        .font(.system(size: 42))
                 })
                     
                 Button(action: {
@@ -171,13 +172,13 @@ struct MiniPlayer: View {
                       }
                     }) {
                       Image(systemName: playerPaused ? "play.fill" : "pause.fill")
-                        .font(.system(size: 45))
+                        .font(.system(size: 42))
                         .foregroundColor(.primary)
                     }
 
                 Button(action: self.musicPlayer.skipToNextItem, label: {
                     Image(systemName: "forward.fill")
-                        .font(.system(size: 45))
+                        .font(.system(size: 42))
                         .foregroundColor(.primary)
                 })
                 }
