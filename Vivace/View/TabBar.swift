@@ -40,18 +40,25 @@ struct TabBar: View {
                             Image(systemName: "magnifyingglass")
                             Text("Search")
                         }
-                    
+                    /*
                     Text("Current Source")
                         .tag(3)
                         .tabItem {
                             Image(systemName: "magnifyingglass")
                             Text("Current Source")
                         }
+ */
                     SearchView(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                         .tag(4)
                         .tabItem {
                             Image(systemName: "magnifyingglass")
                             Text("Search")
+                        }
+                    SettingsView()
+                        .tag(5)
+                        .tabItem {
+                            Image(systemName: "gearshape")
+                            Text("Settings")
                         }
                     
                 }
