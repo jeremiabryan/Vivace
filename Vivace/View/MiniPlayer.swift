@@ -43,7 +43,6 @@ struct MiniPlayer: View {
                 .padding(.vertical, expand ? 30 : 0)
             
             HStack(spacing: 15) {
-                
                 if expand {
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                     
