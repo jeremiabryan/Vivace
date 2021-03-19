@@ -104,14 +104,13 @@ struct MiniPlayer: View {
                 
                 HStack {
                     if (expand) {
-                    VStack {
-                            
+                        VStack(alignment: .leading) {
                         Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
                             .font(.title)
                             .foregroundColor(.primary)
                             .fontWeight(.bold)
                             .matchedGeometryEffect(id: "Label", in: animation)
-                           
+                            
                         Text(self.musicPlayer.nowPlayingItem?.artist ?? "Not Playing")
                             .font(.title3)
                             .foregroundColor(.primary)
