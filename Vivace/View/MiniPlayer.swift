@@ -43,7 +43,6 @@ struct MiniPlayer: View {
                 .padding(.vertical, expand ? 30 : 0)
             
             HStack(spacing: 15) {
-                
                 if expand {
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                     
@@ -57,7 +56,7 @@ struct MiniPlayer: View {
                                     .resizable()
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                     .frame(width: expand ? height: 55, height: expand ? height: 55)
-                                    .cornerRadius(20)
+                    .cornerRadius(expand ? 10 : 90)
                                     .shadow(radius: 10)
                                 
                 
@@ -105,15 +104,13 @@ struct MiniPlayer: View {
                 
                 HStack {
                     if (expand) {
-                    
-                        VStack {
-                            
+                        VStack(alignment: .leading) {
                         Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
                             .font(.title)
                             .foregroundColor(.primary)
                             .fontWeight(.bold)
                             .matchedGeometryEffect(id: "Label", in: animation)
-                           
+                            
                         Text(self.musicPlayer.nowPlayingItem?.artist ?? "Not Playing")
                             .font(.title3)
                             .foregroundColor(.primary)
@@ -148,7 +145,7 @@ struct MiniPlayer: View {
                 }
                 .padding()
               
-                HStack {
+                HStack(spacing: 75) {
                 // regular music Player music actions: backward skip, play/pause, and forward skip
                 Button(action: self.musicPlayer.skipToPreviousItem, label: {
                     Image(systemName: "backward.fill")
@@ -180,10 +177,6 @@ struct MiniPlayer: View {
                 
                 Spacer(minLength: 0)
                
-               
-                
-                
-                
                 HStack(spacing: 15) {
                     Image(systemName: "speaker.fill")
                         
@@ -192,9 +185,8 @@ struct MiniPlayer: View {
                        //.padding(.horizontal)
                     Image(systemName: "speaker.wave.2.fill")
                 }
-                
-               // .padding()
-                HStack(spacing: 22) {
+                .padding()
+                HStack(spacing: 25) {
                     Button(action: {}) {
                         Image(systemName: "arrow.up.message")
                     
