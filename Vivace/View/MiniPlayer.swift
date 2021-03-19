@@ -69,11 +69,6 @@ struct MiniPlayer: View {
                 }
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 if (!expand) {
-//                    Button(action: self.musicPlayer.skipToPreviousItem, label: {
-//                        Image(systemName: "backward.fill")
-//                            .font(.system(size: 30))
-//                            .foregroundColor(.primary)
-//                    })
                     
 // Mini Player music actions: backward skip, play/pause, and forward skip
                     Button(action: {
@@ -179,11 +174,16 @@ struct MiniPlayer: View {
                
                 HStack(spacing: 15) {
                     Image(systemName: "speaker.fill")
+                        .font(.system(size: 16))
                         
                     VolumeSlider()
-                       //.frame(height: 40)
-                       //.padding(.horizontal)
+                       .padding(.horizontal)
+                       .foregroundColor(.white)
+                    
+                    
                     Image(systemName: "speaker.wave.2.fill")
+                        .font(.system(size: 16))
+                    
                 }
                 .padding()
                 HStack(spacing: 25) {
@@ -251,16 +251,3 @@ struct MiniPlayer: View {
     }
     
 }
-
-extension MPVolumeView {
-  static func setVolume(_ volume: Float) {
-    let volumeView = MPVolumeView()
-    let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
-
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
-      slider?.value = volume
-    }
-  }
-}
-
-
