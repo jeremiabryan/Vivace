@@ -13,6 +13,7 @@
 import SwiftUI
 import MediaPlayer
 import CoreGraphics
+import SDWebImageSwiftUI
 
 let volumeView = MPVolumeView()
 
@@ -28,6 +29,8 @@ struct MiniPlayer: View {
     @State var offset : CGFloat = 0
     var safeArea = UIApplication.shared.windows.first?.safeAreaInsets
     @State static var songName = "---"
+    @Binding var currentSong: Song
+    
     
     var body: some View {
         
@@ -40,29 +43,38 @@ struct MiniPlayer: View {
                 .padding(.vertical, expand ? 30 : 0)
             
             HStack(spacing: 15) {
-                
                 if expand {
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
+                    
                 }
-                
-                Image("pic")
-                    .resizable()
+
+                WebImage(url: URL(string: self.currentSong.artworkURL
+                                    .replacingOccurrences(of: "{w}",
+                                                          with: "\(600)")
+                                    .replacingOccurrences(of: "{h}",
+                                                          with: "\(600)")))
+                                    .resizable()
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                    .frame(width: expand ? height : 55, height: expand ? height: 55)
-                    .cornerRadius(15)
+                    .frame(width: expand ? height: 55, height: expand ? height: 55)
+                    .cornerRadius(expand ? 10 : 90)
+                                    .shadow(radius: 10)
+                                
+                
+                                
                 if (!expand) {
                     Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
-                        .font(.title2)
-                        .fontWeight(.bold)
+                        .font(.title3)
+                        //.fontWeight(.bold)
                         .matchedGeometryEffect(id: "Label", in: animation)
                 }
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 if (!expand) {
-                    Button(action: self.musicPlayer.skipToPreviousItem, label: {
-                        Image(systemName: "backward.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.primary)
-                    })
+//                    Button(action: self.musicPlayer.skipToPreviousItem, label: {
+//                        Image(systemName: "backward.fill")
+//                            .font(.system(size: 30))
+//                            .foregroundColor(.primary)
+//                    })
+                    
 // Mini Player music actions: backward skip, play/pause, and forward skip
                     Button(action: {
                           self.playerPaused.toggle()
@@ -74,33 +86,31 @@ struct MiniPlayer: View {
                           }
                         }) {
                           Image(systemName: playerPaused ? "play.fill" : "pause.fill")
-                            .font(.largeTitle)
+                            .font(.system(size: 30))
                             .foregroundColor(.primary)
                         }
 
                     Button(action: self.musicPlayer.skipToNextItem, label: {
                         Image(systemName: "forward.fill")
-                            .font(.largeTitle)
+                            .font(.system(size: 30))
                             .foregroundColor(.primary)
                     })
                 }
             }
             .padding(.horizontal)
             
-            VStack(spacing: 15) {
-                Spacer(minLength: 0)
+            VStack (spacing: 15) {
+                Spacer (minLength: 0)
                 
                 HStack {
                     if (expand) {
-                    VStack {
-                            
+                        VStack(alignment: .leading) {
                         Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
                             .font(.title)
                             .foregroundColor(.primary)
                             .fontWeight(.bold)
                             .matchedGeometryEffect(id: "Label", in: animation)
-                           // .multilineTextAlignment(.leading)
-                        
+                            
                         Text(self.musicPlayer.nowPlayingItem?.artist ?? "Not Playing")
                             .font(.title3)
                             .foregroundColor(.primary)
@@ -134,14 +144,15 @@ struct MiniPlayer: View {
                     
                 }
                 .padding()
-                
+              
+                HStack(spacing: 75) {
+                // regular music Player music actions: backward skip, play/pause, and forward skip
                 Button(action: self.musicPlayer.skipToPreviousItem, label: {
                     Image(systemName: "backward.fill")
-                        .font(.largeTitle)
                         .foregroundColor(.primary)
+                        .font(.system(size: 42))
                 })
-// regular music Player music actions: backward skip, play/pause, and forward skip
-                HStack {
+                    
                 Button(action: {
                       self.playerPaused.toggle()
                       if self.playerPaused {
@@ -152,13 +163,13 @@ struct MiniPlayer: View {
                       }
                     }) {
                       Image(systemName: playerPaused ? "play.fill" : "pause.fill")
-                        .font(.largeTitle)
+                        .font(.system(size: 42))
                         .foregroundColor(.primary)
                     }
 
                 Button(action: self.musicPlayer.skipToNextItem, label: {
                     Image(systemName: "forward.fill")
-                        .font(.largeTitle)
+                        .font(.system(size: 42))
                         .foregroundColor(.primary)
                 })
                 }
@@ -166,26 +177,16 @@ struct MiniPlayer: View {
                 
                 Spacer(minLength: 0)
                
-               
-                
-                
-                
                 HStack(spacing: 15) {
                     Image(systemName: "speaker.fill")
-                    
-                    Slider(value: $volume)
-                        .onTapGesture {
-                            let volumeFloat = Float(volume)
-                            MPVolumeView.setVolume(volumeFloat)
-                            // use volume, extension at bottom, and this to have a shared volume variable
-                        }
-                        // .onDrag(<#T##data: () -> NSItemProvider##() -> NSItemProvider#>)
-                    
                         
+                    VolumeSlider()
+                       //.frame(height: 40)
+                       //.padding(.horizontal)
                     Image(systemName: "speaker.wave.2.fill")
                 }
                 .padding()
-                HStack(spacing: 22) {
+                HStack(spacing: 25) {
                     Button(action: {}) {
                         Image(systemName: "arrow.up.message")
                     
