@@ -60,14 +60,7 @@ struct MiniPlayer: View {
                                     .cornerRadius(20)
                                     .shadow(radius: 10)
                                 
-                WebImage(url: URL(string: self.currentSong.artworkURL
-                                    .replacingOccurrences(of: "{w}", with: "\(Int(24) * 2)")
-                                    .replacingOccurrences(of: "{h}", with: "\(Int(24) * 2)"))
-                )
-                                    .resizable()
-                                    .frame(width: 24, height: 24)
-                                    .cornerRadius(20)
-                                    .shadow(radius: 10)
+                
                                 
                 if (!expand) {
                     Text(self.musicPlayer.nowPlayingItem?.title ?? "Not Playing")
