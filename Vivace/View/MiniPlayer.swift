@@ -147,7 +147,7 @@ struct MiniPlayer: View {
                 }
                 .padding()
               
-                HStack {
+                HStack(spacing: 75) {
                 // regular music Player music actions: backward skip, play/pause, and forward skip
                 Button(action: self.musicPlayer.skipToPreviousItem, label: {
                     Image(systemName: "backward.fill")
@@ -179,10 +179,6 @@ struct MiniPlayer: View {
                 
                 Spacer(minLength: 0)
                
-               
-                
-                
-                
                 HStack(spacing: 15) {
                     Image(systemName: "speaker.fill")
                     
@@ -198,7 +194,7 @@ struct MiniPlayer: View {
                     Image(systemName: "speaker.wave.2.fill")
                 }
                 .padding()
-                HStack(spacing: 22) {
+                HStack(spacing: 25) {
                     Button(action: {}) {
                         Image(systemName: "arrow.up.message")
                     
