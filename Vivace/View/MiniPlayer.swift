@@ -57,7 +57,7 @@ struct MiniPlayer: View {
                                     .resizable()
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                     .frame(width: expand ? height: 55, height: expand ? height: 55)
-                                    .cornerRadius(20)
+                    .cornerRadius(expand ? 10 : 90)
                                     .shadow(radius: 10)
                                 
                 
