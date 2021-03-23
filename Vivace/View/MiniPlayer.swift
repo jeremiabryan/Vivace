@@ -172,7 +172,7 @@ struct MiniPlayer: View {
                 
                 Spacer(minLength: 0)
                
-                HStack(spacing: 15) {
+                HStack(spacing: 0) {
                     Image(systemName: "speaker.fill")
                         .font(.system(size: 16))
                         
