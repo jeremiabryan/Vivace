@@ -17,7 +17,7 @@ First, open Xcode and clone this project.
 
 * Active Apple Developer Program membership
 * macOS 10.14.x or later
-* iOS 12 or later
+* iOS 13 or later
 * Active Apple Music subscription
 * Xcode 12.x (developed using versions 12.4 and 12.5)
 
