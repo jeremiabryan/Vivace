@@ -177,8 +177,8 @@ struct MiniPlayer: View {
                         .font(.system(size: 16))
                         
                     VolumeSlider()
-                       .padding(.horizontal)
-                       .foregroundColor(.white)
+                        .padding(.horizontal)
+                        .foregroundColor(.primary)
                     
                     
                     Image(systemName: "speaker.wave.2.fill")
