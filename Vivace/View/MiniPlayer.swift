@@ -47,12 +47,19 @@ struct MiniPlayer: View {
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                     
                 }
-
-                WebImage(url: URL(string: self.currentSong.artworkURL
+                if (MPMusicPlayerController.applicationMusicPlayer.playbackState == .playing) {
+                    
+                }
+                WebImage(url:
+                            MPMusicPlayerController.applicationMusicPlayer.playbackState == .playing ?
+                            URL(string:
+                                    self.currentSong.artworkURL
                                     .replacingOccurrences(of: "{w}",
                                                           with: "\(600)")
                                     .replacingOccurrences(of: "{h}",
-                                                          with: "\(600)")))
+                                                          with: "\(600)"))
+                            : URL(string: "https://i.imgur.com/5def0zoh.jpg")
+                )
                                     .resizable()
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                     .frame(width: expand ? height: 55, height: expand ? height: 55)
