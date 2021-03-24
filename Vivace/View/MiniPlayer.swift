@@ -47,9 +47,7 @@ struct MiniPlayer: View {
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                     
                 }
-                if (MPMusicPlayerController.applicationMusicPlayer.playbackState == .playing) {
-                    
-                }
+                
                 WebImage(url:
                             MPMusicPlayerController.applicationMusicPlayer.playbackState == .playing ?
                             URL(string:
