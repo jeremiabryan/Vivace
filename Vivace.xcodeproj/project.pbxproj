@@ -30,6 +30,7 @@
 		E078D01425D2654B00C128AB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01325D2654B00C128AB /* BlurView.swift */; };
 		E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01825D2722200C128AB /* MiniPlayer.swift */; };
 		E0A1027A25D63B9900367F56 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1027925D63B9900367F56 /* Search.swift */; };
+		E0BA9E062613F0BE001E62F2 /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BA9E052613F0BE001E62F2 /* SpotifyAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		E078D01325D2654B00C128AB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		E078D01825D2722200C128AB /* MiniPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayer.swift; sourceTree = "<group>"; };
 		E0A1027925D63B9900367F56 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		E0BA9E012613EF9D001E62F2 /* Vivace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vivace-Bridging-Header.h"; sourceTree = "<group>"; };
+		E0BA9E052613F0BE001E62F2 /* SpotifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 		89A1998925D0EA3200FF9206 = {
 			isa = PBXGroup;
 			children = (
+				E0BA9E012613EF9D001E62F2 /* Vivace-Bridging-Header.h */,
 				89A1999425D0EA3200FF9206 /* Vivace */,
 				89A199AB25D0EA3300FF9206 /* VivaceTests */,
 				89A199B625D0EA3300FF9206 /* VivaceUITests */,
@@ -194,6 +198,7 @@
 				E04EB43525F8F02B0009A5DC /* SearchView.swift */,
 				8987E7052603E2A20024AF2C /* PlaylistsView.swift */,
 				89F79E152604328A00E6A690 /* VolumeView.swift */,
+				E0BA9E052613F0BE001E62F2 /* SpotifyAPI.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				5E5967C72604090F00AB3F7F /* SettingsView.swift in Sources */,
 				89F79E162604328A00E6A690 /* VolumeView.swift in Sources */,
 				89A1999F25D0EA3300FF9206 /* Persistence.swift in Sources */,
+				E0BA9E062613F0BE001E62F2 /* SpotifyAPI.swift in Sources */,
 				89A199A225D0EA3300FF9206 /* Vivace.xcdatamodeld in Sources */,
 				89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */,
 				89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */,
@@ -441,8 +447,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Vivace-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -495,8 +503,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Vivace-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
