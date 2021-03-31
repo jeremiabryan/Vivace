@@ -11,6 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate {
     // codeverifier is not required because we are using the iOS SDK, so we use an empty string to appease the HttpRequest gods.
     var codeVerifier: String = ""
+    var playURI = ""
     var window: UIWindow?
     var responseTypeCode: String? {
         didSet {
@@ -56,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
     }()
 
     lazy var appRemote: SPTAppRemote = {
+        
         let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
         appRemote.delegate = self
         return appRemote
@@ -88,9 +90,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
         print(session)
     }
     
+    func connect() {
+        print("connect()")
+        self.playURI = "spotify:track:20I6sIOMTCkB6w7ryavxtO"
+        
+    }
+    
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
         print("connected")
-        
+        self.playURI = "spotify:track:20I6sIOMTCkB6w7ryavxtO"
         self.appRemote.playerAPI?.delegate = self
         self.appRemote.playerAPI?.subscribe(toPlayerState: { (result, error) in
             if let error = error {
@@ -99,11 +107,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
         })
         
        // Want to play a new track?
-       // self.appRemote.playerAPI?.play("spotify:track:13WO20hoD72L0J13WTQWlT", callback: { (result, error) in
-       //     if let error = error {
-       //         print(error.localizedDescription)
-       //     }
-       // })
+        self.appRemote.playerAPI?.play("spotify:track:13WO20hoD72L0J13WTQWlT", callback: { (result, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        })
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {

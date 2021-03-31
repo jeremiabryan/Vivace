@@ -76,7 +76,9 @@ struct Search: View {
                                    height: 180,
                                    alignment: .center)
                             .cornerRadius(15)
-                            
+                            .onTapGesture {
+                                AppDelegate().connect()
+                            }
                             
                      
                     }
