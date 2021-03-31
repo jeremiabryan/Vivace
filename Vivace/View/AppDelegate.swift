@@ -11,7 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate {
     var window: UIWindow?
     
-    let SpotifyClientID = "[your app client id here]"
+    let SpotifyClientID = NSLocalizedString("spotifyClientID", comment: "")
     let SpotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
     
     lazy var configuration = SPTConfiguration(

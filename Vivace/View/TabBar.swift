@@ -74,9 +74,7 @@ struct TabBar: View {
                             // print the JSON payload
                             // TODO: actual lib things here
                             DispatchQueue.global(qos: .background).async {
-                               print(AppleMusicAPI().fetchStorefrontID())
-                                print(AppleMusicAPI().searchAppleMusic("Taylor Swift"))
-                                
+                               print(AppleMusicAPI().fetchStorefrontID()) 
                             }
             
                         }
