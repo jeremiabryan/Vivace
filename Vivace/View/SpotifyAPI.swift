@@ -41,3 +41,7 @@
 //        // Show the error
 //    }
 //}
+class SpotifyAPI {
+    ///fetch Spotify access token. Use after getting responseTypeCode
+    
+}
