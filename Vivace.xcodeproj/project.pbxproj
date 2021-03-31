@@ -31,6 +31,8 @@
 		E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01825D2722200C128AB /* MiniPlayer.swift */; };
 		E0A1027A25D63B9900367F56 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1027925D63B9900367F56 /* Search.swift */; };
 		E0BA9E062613F0BE001E62F2 /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BA9E052613F0BE001E62F2 /* SpotifyAPI.swift */; };
+		E0C700CE2613F3FE009F4C10 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C700CD2613F3FE009F4C10 /* SpotifyiOS.framework */; };
+		E0C700D32613F4E2009F4C10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C700D22613F4E2009F4C10 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		E0A1027925D63B9900367F56 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		E0BA9E012613EF9D001E62F2 /* Vivace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vivace-Bridging-Header.h"; sourceTree = "<group>"; };
 		E0BA9E052613F0BE001E62F2 /* SpotifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPI.swift; sourceTree = "<group>"; };
+		E0C700CD2613F3FE009F4C10 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = "ios-sdk-1.2.2/SpotifyiOS.framework"; sourceTree = "<group>"; };
+		E0C700D22613F4E2009F4C10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8987E7092603F8500024AF2C /* SDWebImageSwiftUI in Frameworks */,
+				E0C700CE2613F3FE009F4C10 /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +126,7 @@
 		89A1998925D0EA3200FF9206 = {
 			isa = PBXGroup;
 			children = (
+				E0C700CD2613F3FE009F4C10 /* SpotifyiOS.framework */,
 				E0BA9E012613EF9D001E62F2 /* Vivace-Bridging-Header.h */,
 				89A1999425D0EA3200FF9206 /* Vivace */,
 				89A199AB25D0EA3300FF9206 /* VivaceTests */,
@@ -187,6 +193,7 @@
 		E078D00525D258AA00C128AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E0C700D22613F4E2009F4C10 /* AppDelegate.swift */,
 				E0090533260AA5BA00F3287D /* Localizable.strings */,
 				E04EB40925EF38310009A5DC /* SwiftyJSON.swift */,
 				E078D00625D259C500C128AB /* TabBar.swift */,
@@ -356,6 +363,7 @@
 				E04EB40A25EF38320009A5DC /* SwiftyJSON.swift in Sources */,
 				E078D00725D259C500C128AB /* TabBar.swift in Sources */,
 				8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */,
+				E0C700D32613F4E2009F4C10 /* AppDelegate.swift in Sources */,
 				E078D01425D2654B00C128AB /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +529,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Vivace/Preview Content\"";
 				DEVELOPMENT_TEAM = C2R23HEATK;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios-sdk-1.2.2",
+				);
 				INFOPLIST_FILE = Vivace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -543,6 +555,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Vivace/Preview Content\"";
 				DEVELOPMENT_TEAM = C2R23HEATK;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios-sdk-1.2.2",
+				);
 				INFOPLIST_FILE = Vivace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
