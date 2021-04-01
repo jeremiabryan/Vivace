@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
            let tokenRefreshURL = URL(string: "http://localhost:1234/refresh") {
             self.configuration.tokenSwapURL = tokenSwapURL
             self.configuration.tokenRefreshURL = tokenRefreshURL
-            self.configuration.playURI = ""
+            // This will determine the song that plays upon authorization
+            self.configuration.playURI = "spotify:track:20I6sIOMTCkB6w7ryavxtO"
         }
         let manager = SPTSessionManager(configuration: self.configuration, delegate: self)
         return manager
@@ -122,6 +123,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         if let _ = self.appRemote.connectionParameters.accessToken {
             self.appRemote.connect()

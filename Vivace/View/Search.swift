@@ -24,7 +24,7 @@ struct Search: View {
                             "user-follow-read", "user-follow-modify",
                         ]
     private let spotifyClientId = NSLocalizedString("spotifyClientID", comment: "")
-    private let spotifyClientSecretKey = NSLocalizedString("spotifyClientID", comment: "")
+    private let spotifyClientSecretKey = NSLocalizedString("spotifyClientSecret", comment: "")
     @Binding var musicPlayer: MPMusicPlayerController
     @Binding var currentSong: Song
     var scopes: SPTScope = [.userReadEmail, .userReadPrivate,
@@ -123,7 +123,7 @@ struct Search: View {
                                     }
                             }
                             .onTapGesture {
-                                
+                                AppDelegate().appRemote.authorizeAndPlayURI("spotify:track:20I6sIOMTCkB6w7ryavxtO")
                             }
                             
                         

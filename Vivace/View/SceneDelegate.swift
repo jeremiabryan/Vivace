@@ -11,7 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,
     private let redirectUri = URL(string:"vivace://redirect/")!
     private let clientIdentifier = NSLocalizedString("spotifyClientID", comment: "")
     
-    private var playURI = "spotify:track:20I6sIOMTCkB6w7ryavxtO"
+    
     var window: UIWindow?
     lazy var configuration = SPTConfiguration(
         clientID: clientIdentifier,
@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,
       let appRemote = SPTAppRemote(configuration: self.configuration, logLevel: .debug)
       appRemote.connectionParameters.accessToken = self.accessToken
       appRemote.delegate = self
+        
       return appRemote
     }()
 
@@ -69,7 +70,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,
             if (!appRemote.isConnected) {//ultimately access token issues aren't the only thing that will cause this the connection to fail
                 print("Failed!")
                 //make spotify authorize and create an access token for us
-                self.appRemote.authorizeAndPlayURI("spotify:track:20I6sIOMTCkB6w7ryavxtO")
+                //self.appRemote.authorizeAndPlayURI("spotify:track:20I6sIOMTCkB6w7ryavxtO")
             }
         }
 
