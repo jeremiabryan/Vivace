@@ -81,22 +81,7 @@ struct TabBar: View {
                         }
                     }
                     // SPOTIFY ACCESS:
-                    // This is beyond wildly unconventional design and will need to be moved to the SpotifyAPI.swift we're building to keep it clean, aside from the necessary Obj-C bindings.
                     
-                    
-//                    let sessionManager = AppDelegate().sessionManager
-//                    let scopes: SPTScope = [.userReadEmail, .userReadPrivate,
-//                                                         .userReadPlaybackState, .userModifyPlaybackState,
-//                                                         .userReadCurrentlyPlaying, .streaming, .appRemoteControl,
-//                                                         .playlistReadCollaborative, .playlistModifyPublic, .playlistReadPrivate, .playlistModifyPrivate,
-//                                                         .userLibraryModify, .userLibraryRead,
-//                                                         .userTopRead, .userReadPlaybackState, .userReadCurrentlyPlaying,
-//                                                         .userFollowRead, .userFollowModify,]
-//                        if #available(iOS 11, *) {
-//                          // Use this on iOS 11 and above to take advantage of SFAuthenticationSession
-//                            sessionManager.initiateSession(with: scopes, options: .default)
-//                            
-//                        }
                 }
                 MiniPlayer(animation: animation, expand: $expand, currentSong: self.$currentSong)
 

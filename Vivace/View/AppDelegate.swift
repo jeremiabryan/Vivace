@@ -19,9 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
         redirectURL: SpotifyRedirectURL
     )
     
+    
     lazy var sessionManager: SPTSessionManager = {
-        if let tokenSwapURL = URL(string: "https://[your token swap app domain here]/api/token"),
-           let tokenRefreshURL = URL(string: "https://[your token swap app domain here]/api/refresh_token") {
+        if let tokenSwapURL = URL(string: "http://localhost:1234/swap"),
+           let tokenRefreshURL = URL(string: "http://localhost:1234/refresh") {
             self.configuration.tokenSwapURL = tokenSwapURL
             self.configuration.tokenRefreshURL = tokenRefreshURL
             self.configuration.playURI = ""
