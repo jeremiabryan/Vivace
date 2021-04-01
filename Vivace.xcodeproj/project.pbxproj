@@ -34,6 +34,8 @@
 		E0C700E326140418009F4C10 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C700E226140418009F4C10 /* SpotifyiOS.framework */; };
 		E0C70129261618AD009F4C10 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C70128261618AD009F4C10 /* SpotifyiOS.framework */; };
 		E0C701392616232F009F4C10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C701382616232F009F4C10 /* AppDelegate.swift */; };
+		E0C701472616321C009F4C10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C701462616321C009F4C10 /* ViewController.swift */; };
+		E0C70152261650B1009F4C10 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C70151261650B0009F4C10 /* SpotifyiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		E0C700E226140418009F4C10 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = "ios-sdk-1.2.2/SpotifyiOS.framework"; sourceTree = "<group>"; };
 		E0C70128261618AD009F4C10 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = "ios-sdk-1.2.2/SpotifyiOS.framework"; sourceTree = "<group>"; };
 		E0C701382616232F009F4C10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E0C701462616321C009F4C10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0C70151261650B0009F4C10 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = "ios-sdk-1.2.2/SpotifyiOS.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8987E7092603F8500024AF2C /* SDWebImageSwiftUI in Frameworks */,
+				E0C70152261650B1009F4C10 /* SpotifyiOS.framework in Frameworks */,
 				E0C70129261618AD009F4C10 /* SpotifyiOS.framework in Frameworks */,
 				E0C700E326140418009F4C10 /* SpotifyiOS.framework in Frameworks */,
 			);
@@ -131,6 +136,7 @@
 			children = (
 				E0C700E226140418009F4C10 /* SpotifyiOS.framework */,
 				E0C70128261618AD009F4C10 /* SpotifyiOS.framework */,
+				E0C70151261650B0009F4C10 /* SpotifyiOS.framework */,
 				E0BA9E012613EF9D001E62F2 /* Vivace-Bridging-Header.h */,
 				89A1999425D0EA3200FF9206 /* Vivace */,
 				89A199AB25D0EA3300FF9206 /* VivaceTests */,
@@ -210,6 +216,7 @@
 				8987E7052603E2A20024AF2C /* PlaylistsView.swift */,
 				89F79E152604328A00E6A690 /* VolumeView.swift */,
 				E0C701382616232F009F4C10 /* AppDelegate.swift */,
+				E0C701462616321C009F4C10 /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -364,6 +371,7 @@
 				E04EB40F25EF38740009A5DC /* AppleMusicAPI.swift in Sources */,
 				E0A1027A25D63B9900367F56 /* Search.swift in Sources */,
 				E04EB40A25EF38320009A5DC /* SwiftyJSON.swift in Sources */,
+				E0C701472616321C009F4C10 /* ViewController.swift in Sources */,
 				E078D00725D259C500C128AB /* TabBar.swift in Sources */,
 				8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */,
 				E0C700D32613F4E2009F4C10 /* SceneDelegate.swift in Sources */,

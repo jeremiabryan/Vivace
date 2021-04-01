@@ -15,7 +15,14 @@ struct Search: View {
     @State private var searchResults = [Song]()
     @Binding var musicPlayer: MPMusicPlayerController
     @Binding var currentSong: Song
-    
+    @State var scopes: SPTScope = [.userReadEmail, .userReadPrivate,
+    .userReadPlaybackState, .userModifyPlaybackState,
+    .userReadCurrentlyPlaying, .streaming, .appRemoteControl,
+    .playlistReadCollaborative, .playlistModifyPublic, .playlistReadPrivate, .playlistModifyPrivate,
+    .userLibraryModify, .userLibraryRead,
+    .userTopRead, .userReadPlaybackState, .userReadCurrentlyPlaying,
+    .userFollowRead, .userFollowModify,]
+    @State var sessionManager = AppDelegate().sessionManager
     @State var search = ""
     var columns = Array(repeating: GridItem(.flexible(), spacing:20), count: 2)
     
@@ -76,11 +83,20 @@ struct Search: View {
                                    height: 180,
                                    alignment: .center)
                             .cornerRadius(15)
+                            .onAppear() {
+                                
+                                if #available(iOS 11, *) {
+                                      // Use this on iOS 11 and above to take advantage of SFAuthenticationSession
+                                      sessionManager.initiateSession(with: scopes, options: .clientOnly)
+                                    }
+                            }
                             .onTapGesture {
+                                
                                 SceneDelegate().connect()
+                                
                             }
                             
-                     
+                        
                     }
                 }
                 .padding(.top, 10)
@@ -90,6 +106,30 @@ struct Search: View {
         }
         
     }
+    
+    
+}
+extension UIView {
+    func findViewController() -> UIViewController? {
+        if let nextResponder = self.next as? UIViewController {
+            return nextResponder
+        } else if let nextResponder = self.next as? UIView {
+            return nextResponder.findViewController()
+        } else {
+            return nil
+        }
+    }
 }
 
-
+extension UIView {
+    var parentViewController: UIViewController? {
+        var parentResponder: UIResponder? = self
+        while parentResponder != nil {
+            parentResponder = parentResponder?.next
+            if let viewController = parentResponder as? UIViewController {
+                return viewController
+            }
+        }
+        return nil
+    }
+}

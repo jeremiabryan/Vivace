@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
     var window: UIWindow?
     
     let SpotifyClientID = NSLocalizedString("spotifyClientID", comment: "")
-    let SpotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
+    let SpotifyRedirectURL = URL(string: "vivace://redirect/")!
     
     lazy var configuration = SPTConfiguration(
         clientID: SpotifyClientID,
@@ -65,7 +65,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
     
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
         print("connected")
-        
         self.appRemote.playerAPI?.delegate = self
         self.appRemote.playerAPI?.subscribe(toPlayerState: { (result, error) in
             if let error = error {
@@ -131,4 +130,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
 }
