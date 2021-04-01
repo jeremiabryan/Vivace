@@ -77,7 +77,7 @@ struct Search: View {
                                    alignment: .center)
                             .cornerRadius(15)
                             .onTapGesture {
-                                AppDelegate().connect()
+                                SceneDelegate().connect()
                             }
                             
                      
