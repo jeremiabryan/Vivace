@@ -68,7 +68,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,
             
             //if it failed, aka we dont have a valid access token
             if (!appRemote.isConnected) {//ultimately access token issues aren't the only thing that will cause this the connection to fail
-                print("Failed!")
+                
                 //make spotify authorize and create an access token for us
                 //self.appRemote.authorizeAndPlayURI("spotify:track:20I6sIOMTCkB6w7ryavxtO")
             }
@@ -76,7 +76,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,
 
    
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-
+        
         self.appRemote.playerAPI?.delegate = self
           self.appRemote.playerAPI?.subscribe(toPlayerState: { (result, error) in
             if let error = error {

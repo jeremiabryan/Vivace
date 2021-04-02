@@ -14,6 +14,8 @@ struct Search: View {
     private let redirectUri = URL(string:"vivace://redirect/")!
     @State private var searchText = ""
     @State private var searchResults = [Song]()
+    @State var playlistOne = "spotify:playlist:37i9dQZEVXbLRQDuF5jeBp"
+    @State var playlistTwo = "spotify:playlist:137E6KBEACEjDWve3W6cgq"
     let stringScopes = [
                             "user-read-email", "user-read-private",
                             "user-read-playback-state", "user-modify-playback-state", "user-read-currently-playing",
@@ -35,7 +37,9 @@ struct Search: View {
     .userTopRead, .userReadPlaybackState, .userReadCurrentlyPlaying,
     .userFollowRead, .userFollowModify,]
     @State var sessionManager = AppDelegate().sessionManager
+    @State var appRemote = AppDelegate().appRemote
     @State var search = ""
+    var token = ""
     var columns = Array(repeating: GridItem(.flexible(), spacing:20), count: 2)
     var codeVerifier: String = ""
         var responseTypeCode: String? {
@@ -50,9 +54,8 @@ struct Search: View {
                     DispatchQueue.main.async {
                         
                         SceneDelegate().appRemote.connectionParameters.accessToken = accessToken
-                        SceneDelegate().appRemote.authorizeAndPlayURI("spotify:track:20I6sIOMTCkB6w7ryavxtO")
                         SceneDelegate().appRemote.connect()
-                        
+
                     }
                 }
             }
@@ -106,6 +109,42 @@ struct Search: View {
                         
                 
                 LazyVGrid(columns: columns, spacing:20) {
+                    VStack() {
+                        Image("50numbr")
+                            .resizable()
+                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                            .frame(width: (UIScreen.main.bounds.width - 50) / 2,
+                                   height: 180,
+                                   alignment: .center)
+                            .cornerRadius(15)
+                            .onAppear() {
+                            }
+                        Text("Vivace Top 50")
+                    }
+                    .onTapGesture {
+                        
+                        appRemote.authorizeAndPlayURI(playlistOne)
+                    }
+                    VStack() {
+                        Image("chiptune")
+                            .resizable()
+                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                            .frame(width: (UIScreen.main.bounds.width - 50) / 2,
+                                   height: 180,
+                                   alignment: .center)
+                            .cornerRadius(15)
+                            .onAppear() {
+                            }
+                        Text("Vivace Chiptune")
+                    }
+                    .onTapGesture {
+                        //appRemote.authorizeAndPlayURI(playlistTwo)
+                        
+                        appRemote.playerAPI?.play(playlistTwo, asRadio: false) { (result, error) in
+                            
+                        }
+                    }
+                    
                     ForEach(1...10, id: \.self) {index in
                         Image("p\(index)")
                             .resizable()
@@ -116,15 +155,9 @@ struct Search: View {
                             .cornerRadius(15)
                             .onAppear() {
                                 
-                                if #available(iOS 11, *) {
-                                      // Use this on iOS 11 and above to take advantage of SFAuthenticationSession
-                                      sessionManager.initiateSession(with: scopes, options: .clientOnly)
-                                    
-                                    }
+                                
                             }
-                            .onTapGesture {
-                                AppDelegate().appRemote.authorizeAndPlayURI("spotify:track:20I6sIOMTCkB6w7ryavxtO")
-                            }
+                            
                             
                         
                     }
@@ -136,6 +169,8 @@ struct Search: View {
         }
         
     }
+    
+    
     
     func fetchSpotifyToken(completion: @escaping ([String: Any]?, Error?) -> Void) {
         let url = URL(string: "https://accounts.spotify.com/api/token")!

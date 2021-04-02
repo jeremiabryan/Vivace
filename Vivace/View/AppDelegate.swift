@@ -26,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
             self.configuration.tokenSwapURL = tokenSwapURL
             self.configuration.tokenRefreshURL = tokenRefreshURL
             // This will determine the song that plays upon authorization
-            self.configuration.playURI = "spotify:track:20I6sIOMTCkB6w7ryavxtO"
+            self.configuration.playURI = "spotify:playlist:37i9dQZEVXbLRQDuF5jeBp"
+            //self.configuration.playURI = ""
         }
         let manager = SPTSessionManager(configuration: self.configuration, delegate: self)
         return manager

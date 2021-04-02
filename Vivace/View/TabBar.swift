@@ -8,14 +8,19 @@
 import SwiftUI
 import StoreKit
 import MediaPlayer
+import SDWebImageSwiftUI
 
 struct TabBar: View {
-    
+    @State var sessionManager = AppDelegate().sessionManager
+    @State var appRemote = AppDelegate().appRemote
     @State var expand = false
     @Namespace var animation
     @State private var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
     @State private var currentSong = Song(id: "", name: "", artistName: "", artworkURL: "")
     @State var current = 2
+    @State var playlistOne = "spotify:playlist:37i9dQZEVXbLRQDuF5jeBp"
+    // @State var SPTImage image =
+    @State var albumArtImageView: UIImageView!
     var body: some View {
         
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom),
@@ -27,6 +32,7 @@ struct TabBar: View {
                         .tabItem {
                             Image(systemName: "rectangle.stack.fill")
                             Text("Library")
+                                
                         }
                     PlaylistsView()
                         .tag(1)
@@ -40,14 +46,9 @@ struct TabBar: View {
                             Image(systemName: "magnifyingglass")
                             Text("Search")
                         }
-                    /*
-                    Text("Current Source")
-                        .tag(3)
-                        .tabItem {
-                            Image(systemName: "magnifyingglass")
-                            Text("Current Source")
-                        }
- */
+                    
+                    
+ 
                     SearchView(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                         .tag(4)
                         .tabItem {
@@ -81,12 +82,17 @@ struct TabBar: View {
                         }
                     }
                     // SPOTIFY ACCESS:
-                    
+                    if #available(iOS 11, *) {
+                          // Use this on iOS 11 and above to take advantage of SFAuthenticationSession
+                        
+                          sessionManager.initiateSession(with: scopes, options: .clientOnly)
+                        
+                        }
                 }
                 MiniPlayer(animation: animation, expand: $expand, currentSong: self.$currentSong)
 
                })
-            }
+    }
     
     
     
