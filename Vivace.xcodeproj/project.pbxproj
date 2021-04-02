@@ -38,6 +38,7 @@
 		E0C70152261650B1009F4C10 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C70151261650B0009F4C10 /* SpotifyiOS.framework */; };
 		E0C7015F26169ECC009F4C10 /* 50numbr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0C7015E26169ECC009F4C10 /* 50numbr.jpg */; };
 		E0C7016F2616A2A7009F4C10 /* file-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0C7016E2616A2A7009F4C10 /* file-2.jpg */; };
+		E0C701772616B86D009F4C10 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C701762616B86D009F4C10 /* SpotifyiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		E0C70151261650B0009F4C10 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = "ios-sdk-1.2.2/SpotifyiOS.framework"; sourceTree = "<group>"; };
 		E0C7015E26169ECC009F4C10 /* 50numbr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 50numbr.jpg; sourceTree = "<group>"; };
 		E0C7016E2616A2A7009F4C10 /* file-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "file-2.jpg"; sourceTree = "<group>"; };
+		E0C701762616B86D009F4C10 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = "ios-sdk-1.2.2/SpotifyiOS.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0C701772616B86D009F4C10 /* SpotifyiOS.framework in Frameworks */,
 				8987E7092603F8500024AF2C /* SDWebImageSwiftUI in Frameworks */,
 				E0C70152261650B1009F4C10 /* SpotifyiOS.framework in Frameworks */,
 				E0C70129261618AD009F4C10 /* SpotifyiOS.framework in Frameworks */,
@@ -141,6 +144,7 @@
 				E0C700E226140418009F4C10 /* SpotifyiOS.framework */,
 				E0C70128261618AD009F4C10 /* SpotifyiOS.framework */,
 				E0C70151261650B0009F4C10 /* SpotifyiOS.framework */,
+				E0C701762616B86D009F4C10 /* SpotifyiOS.framework */,
 				E0BA9E012613EF9D001E62F2 /* Vivace-Bridging-Header.h */,
 				89A1999425D0EA3200FF9206 /* Vivace */,
 				89A199AB25D0EA3300FF9206 /* VivaceTests */,

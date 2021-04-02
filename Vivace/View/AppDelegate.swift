@@ -9,6 +9,7 @@ import UIKit
 
 //@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate {
+    var playURI = ""
     var window: UIWindow?
     
     let SpotifyClientID = NSLocalizedString("spotifyClientID", comment: "")
@@ -26,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
             self.configuration.tokenSwapURL = tokenSwapURL
             self.configuration.tokenRefreshURL = tokenRefreshURL
             // This will determine the song that plays upon authorization
-            self.configuration.playURI = "spotify:playlist:37i9dQZEVXbLRQDuF5jeBp"
+            self.configuration.playURI = self.playURI
             //self.configuration.playURI = ""
         }
         let manager = SPTSessionManager(configuration: self.configuration, delegate: self)

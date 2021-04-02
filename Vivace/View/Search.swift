@@ -123,7 +123,31 @@ struct Search: View {
                     }
                     .onTapGesture {
                         
-                        appRemote.authorizeAndPlayURI(playlistOne)
+                        var codeVerifier: String = ""
+                            var responseTypeCode: String? {
+                                didSet {
+                                    fetchSpotifyToken { (dictionary, error) in
+                                        if let error = error {
+                                            print("Fetching token request error \(error)")
+                                            return
+                                        }
+                                        let accessToken = dictionary!["access_token"] as! String
+                                        
+                                        DispatchQueue.main.async {
+                                            
+                                            SceneDelegate().appRemote.connectionParameters.accessToken = accessToken
+                                            SceneDelegate().appRemote.connect()
+                                            
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        sessionManager.initiateSession(with: scopes, options: .clientOnly)
+                        // appRemote.authorizeAndPlayURI(playlistTwo)
+                        
+                                    
+                        
                     }
                     VStack() {
                         Image("chiptune")
@@ -138,11 +162,34 @@ struct Search: View {
                         Text("Vivace Chiptune")
                     }
                     .onTapGesture {
-                        //appRemote.authorizeAndPlayURI(playlistTwo)
+                        AppDelegate().playURI = playlistTwo
+                        var codeVerifier: String = ""
+                            var responseTypeCode: String? {
+                                didSet {
+                                    fetchSpotifyToken { (dictionary, error) in
+                                        if let error = error {
+                                            print("Fetching token request error \(error)")
+                                            return
+                                        }
+                                        let accessToken = dictionary!["access_token"] as! String
+                                        
+                                        DispatchQueue.main.async {
+                                            
+                                            SceneDelegate().appRemote.connectionParameters.accessToken = accessToken
+                                            SceneDelegate().appRemote.connect()
+                                            
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        sessionManager.initiateSession(with: scopes, options: .clientOnly)
+                        appRemote.connect()
                         
-                        appRemote.playerAPI?.play(playlistTwo, asRadio: false) { (result, error) in
-                            
-                        }
+                        // appRemote.authorizeAndPlayURI(playlistTwo)
+                        appRemote.authorizeAndPlayURI(playlistTwo)
+                                    
+                        
                     }
                     
                     ForEach(1...10, id: \.self) {index in
