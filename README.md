@@ -16,13 +16,18 @@ First, open Xcode and clone this project.
 * Spotify:
 * Setting up the environment to use the Spotify framework and API can be done by following this link: https://developer.spotify.com/documentation/ios/quick-start/#configure-initial-music. This acts as a placeholder until a more comprehensive instruction set is made.
 
-## Requirements
+## Developer Requirements
 
 * Active Apple Developer Program membership
 * macOS 10.14.x or later
 * iOS 13 or later
+* Spotify Developer Account
 * Active Apple Music subscription
 * Xcode 12.x (developed using versions 12.4 and 12.5)
+
+## User Requirements
+* Apple Music is required to enable Apple Music-based features
+* The Spotify App is required to enable Spotify playback. Free or premium accounts work!
 
 ## Dependencies
 * https://github.com/SDWebImage/SDWebImageSwiftUI
