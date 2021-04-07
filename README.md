@@ -45,5 +45,5 @@ First, open Xcode and clone this project.
 * MiniPlayer doesn't update with Spotify, but the play/pause is functional
 
 ### Created by Jeremia Reyes, Devin Rogers, and Carlos Lopez
-
+### This project was supervised by Dr. Cengiz Gunay at Georgia Gwinnett College
 Apple Music and iCloud are registered trademarks of Apple Inc.
