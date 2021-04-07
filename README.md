@@ -41,7 +41,8 @@ First, open Xcode and clone this project.
 * Keyboard does not dismiss unless "Return" is pressed
 * App stops responding when results do not appear
 * special characters crash application
-
+* Spotify authorizes media change requests and token exchange, but the App Remote doesn't successfully switch media
+* MiniPlayer doesn't update with Spotify, but the play/pause is functional
 
 ### Created by Jeremia Reyes, Devin Rogers, and Carlos Lopez
 
