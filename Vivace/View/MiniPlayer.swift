@@ -32,6 +32,7 @@ struct MiniPlayer: View {
     @Binding var currentSong: Song
     
     
+    
     var body: some View {
         
         VStack {
@@ -198,7 +199,6 @@ struct MiniPlayer: View {
                         .padding(.horizontal)
                         .foregroundColor(.primary)
                     
-                    
                     Image(systemName: "speaker.wave.2.fill")
                         .font(.system(size: 16))
                     
@@ -223,6 +223,8 @@ struct MiniPlayer: View {
                             .font(.title2)
                             .foregroundColor(.primary)
                     }
+                    
+                    
                 }
                 .padding(.bottom, safeArea?.bottom == 0 ? 15 : safeArea?.bottom)
             }
@@ -262,6 +264,9 @@ struct MiniPlayer: View {
         }
     }
     
+    func setCurrentSong(song: Song) {
+        self.currentSong = song
+    }
     
     
     func setTitle(value:String) {

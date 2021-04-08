@@ -12,6 +12,8 @@ import MediaPlayer
 
 struct Search: View {
     private let redirectUri = URL(string:"vivace://redirect/")!
+    @Binding var musicPlayer: MPMusicPlayerController
+    @Binding var currentSong: Song
     @State private var searchText = ""
     @State private var searchResults = [Song]()
     @State var playlistOne = "spotify:playlist:37i9dQZEVXbLRQDuF5jeBp"
@@ -27,8 +29,7 @@ struct Search: View {
                         ]
     private let spotifyClientId = NSLocalizedString("spotifyClientID", comment: "")
     private let spotifyClientSecretKey = NSLocalizedString("spotifyClientSecret", comment: "")
-    @Binding var musicPlayer: MPMusicPlayerController
-    @Binding var currentSong: Song
+    
     var scopes: SPTScope = [.userReadEmail, .userReadPrivate,
     .userReadPlaybackState, .userModifyPlaybackState,
     .userReadCurrentlyPlaying, .streaming, .appRemoteControl,
@@ -120,17 +121,34 @@ struct Search: View {
                 }
                 LazyVGrid(columns: columns, spacing:20) {
                     VStack() {
-                        Image("50numbr")
-                            .resizable()
-                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                            .frame(width: (UIScreen.main.bounds.width - 50) / 2,
-                                   height: 180,
-                                   alignment: .center)
-                            .cornerRadius(15)
-                            .onAppear() {
+                        ZStack(alignment: .bottomTrailing) {
+                            Image("50numbr")
+                                .resizable()
+                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                .frame(width: (UIScreen.main.bounds.width - 50) / 2,
+                                       height: 180,
+                                       alignment: .center)
+                                
+                                .cornerRadius(15)
+                                .shadow(color: .green, radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+                                .onAppear() {
+                                }
+                            
+                            
+                            ZStack() {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .fill(Color.green)
+                                    .frame(width: 25, height: 25)
+                                Image(systemName: "line.horizontal.3.decrease.circle.fill")
+                                    .foregroundColor(.black)
+                                    // .accentColor(.red)
+                                    
                             }
+                            .padding([.bottom, .trailing], 10)
+                        }
                         Text("Vivace Top 50")
                     }
+                    // .shadow(radius: 5)
                     
                     .onTapGesture {
                         
@@ -157,17 +175,36 @@ struct Search: View {
                         SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
                     }
                     VStack() {
-                        Image("chiptune")
-                            .resizable()
-                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                            .frame(width: (UIScreen.main.bounds.width - 50) / 2,
-                                   height: 180,
-                                   alignment: .center)
-                            .cornerRadius(15)
-                            .onAppear() {
+                        ZStack(alignment: .bottomTrailing) {
+                            Image("chiptune")
+                                
+                                .resizable()
+                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                .frame(width: (UIScreen.main.bounds.width - 50) / 2,
+                                       height: 180,
+                                       alignment: .center)
+                                .cornerRadius(15)
+                                .shadow(color: .green, radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+                                .onAppear() {
+                                }
+                            
+                            
+                            
+                            ZStack() {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .fill(Color.green)
+                                    .frame(width: 25, height: 25)
+                                Image(systemName: "line.horizontal.3.decrease.circle.fill")
+                                    .foregroundColor(.black)
+                                    // .accentColor(.red)
+                                    
                             }
+                            .padding([.bottom, .trailing], 10)
+                        }
                         Text("Vivace Chiptune")
                     }
+                    // .shadow(radius: 5)
+                    
                     .onTapGesture {
                         AppDelegate().playURI = playlistTwo
                         var codeVerifier: String = ""
@@ -196,6 +233,55 @@ struct Search: View {
                         // appRemote.authorizeAndPlayURI(playlistTwo)
                         SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
                           
+                    }
+                    
+                    VStack() {
+                        ZStack(alignment: .bottomTrailing) {
+                            ZStack(alignment: .bottom) {
+                                Image("albumblue")
+                                    .resizable()
+                                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                    .frame(width: (UIScreen.main.bounds.width - 50) / 2,
+                                           height: 180,
+                                           alignment: .center)
+                                    
+                                    .cornerRadius(15)
+                                    .shadow(color: .red, radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+                                    .onAppear() {
+                                    }
+//                                Capsule()
+//                                    .fill(Color.red)
+//                                    .frame(width: (UIScreen.main.bounds.width - 50) / 2, height: 15)
+                            }
+                            
+                            
+                            ZStack() {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .fill(Color.red)
+                                    .frame(width: 25, height: 25)
+                                Image(systemName: "music.note")
+                                    .foregroundColor(.white)
+                                    // .accentColor(.red)
+                                    
+                            }
+                            .padding([.bottom, .trailing], 10)
+                            
+                        }
+                        
+                        Text("Upbeat Mix")
+                    }
+                    .onTapGesture {
+                        musicPlayer.stop()
+                        // for some reason, some songs throw an error 6 (failed to prepare to play) here
+                        // if that happens, try another song,
+                        // but definitely TODO: notify user if that happens
+                        musicPlayer.setQueue(with: ["475670122", "271978749",
+                                                    "271978749", "724456984",
+                                                    "1032913975"])
+                        
+                        musicPlayer.prepareToPlay()
+                        musicPlayer.play()
+                        
                     }
                     
                     ForEach(1...10, id: \.self) {index in
