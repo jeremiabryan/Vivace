@@ -278,7 +278,7 @@ struct Search: View {
                         musicPlayer.setQueue(with: ["475670122", "271978749",
                                                     "271978749", "724456984",
                                                     "1032913975"])
-                        
+                            // MiniPlayer.setCurrentSong(Song)
                         musicPlayer.prepareToPlay()
                         musicPlayer.play()
                         

@@ -264,7 +264,7 @@ struct MiniPlayer: View {
         }
     }
     
-    func setCurrentSong(song: Song) {
+    func setCurrentSong(song:Song) {
         self.currentSong = song
     }
     
