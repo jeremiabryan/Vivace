@@ -43,6 +43,7 @@ First, open Xcode and clone this project.
 * special characters crash application
 * Spotify authorizes media change requests and token exchange, but the App Remote doesn't successfully switch media
 * MiniPlayer doesn't update with Spotify, but the play/pause is functional
+* STaRS version has exceptionally long boot time (probably due to the @State vars dependent on Spotify iOS SDK)
 
 ### Created by Jeremia Reyes, Devin Rogers, and Carlos Lopez
 ### This project was supervised by Dr. Cengiz Gunay at Georgia Gwinnett College
