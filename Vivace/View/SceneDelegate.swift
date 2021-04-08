@@ -65,7 +65,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,
             //attempt a connection
             
             appRemote.connect()
-            
+            print("connecting scenedelegate")
             //if it failed, aka we dont have a valid access token
             if (!appRemote.isConnected) {//ultimately access token issues aren't the only thing that will cause this the connection to fail
                 
@@ -76,7 +76,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,
 
    
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        
+        print("connected scenedelegate")
         self.appRemote.playerAPI?.delegate = self
           self.appRemote.playerAPI?.subscribe(toPlayerState: { (result, error) in
             if let error = error {

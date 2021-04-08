@@ -36,8 +36,6 @@ struct Search: View {
     .userLibraryModify, .userLibraryRead,
     .userTopRead, .userReadPlaybackState, .userReadCurrentlyPlaying,
     .userFollowRead, .userFollowModify,]
-    @State var sessionManager = AppDelegate().sessionManager
-    @State var appRemote = AppDelegate().appRemote
     @State var search = ""
     var token = ""
     var columns = Array(repeating: GridItem(.flexible(), spacing:20), count: 2)
@@ -64,50 +62,62 @@ struct Search: View {
         ScrollView {
             VStack(spacing: 18) {
                 HStack() {
-                    Text("Search")
+                    Text("Home")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .foregroundColor(.primary)
                     Spacer(minLength: 0)
+                }
+                
+                VStack() {
+                    HStack() {
+                        Image("spotifylogo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: (UIScreen.main.bounds.width - 50) / 2,
+                                   height: 90,
+                                   alignment: .center)
+                            .cornerRadius(15)
+                            .onAppear() {
+                            }
+                        Image("17570")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: (UIScreen.main.bounds.width - 50) / 2,
+                                   height: 90,
+                                   alignment: .center)
+                            .cornerRadius(15)
+                            .onAppear() {
+                            }
+                    }
+                    .background(Color.green)
+                    .cornerRadius(15.0)
+                    Text("Now Playing on Spotify")
+                }
+                .onTapGesture {
                     
-                }
-                HStack(spacing: 15) {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.primary)
-                    TextField("Search", text:$search)
-                }
-                .padding(.vertical, 10)
-                .padding(.horizontal)
-                .background(Color.primary.opacity(0.06))
-                .cornerRadius(15)
-                
-                
-                List {
-                                ForEach(searchResults, id:\.id) { song in
-                                    HStack {
-                                        
-                                        VStack(alignment: .leading) {
-                                            Text(song.name)
-                                                .font(.headline)
-                                            Text(song.artistName)
-                                                .font(.caption)
-                                                .foregroundColor(.secondary)
-                                        }
-                                        Spacer()
-                                        Button(action: {
-                                            self.currentSong = song
-                                            self.musicPlayer.setQueue(with: [song.id])
-                                            self.musicPlayer.play()
-                                        }) {
-                                            Image(systemName: "play.fill")
-                                                .foregroundColor(.pink)
-                                        }
+                    var codeVerifier: String = ""
+                        var responseTypeCode: String? {
+                            didSet {
+                                fetchSpotifyToken { (dictionary, error) in
+                                    if let error = error {
+                                        print("Fetching token request error \(error)")
+                                        return
                                     }
+                                    let accessToken = dictionary!["access_token"] as! String
+                                    
+                                    DispatchQueue.main.async {
+                                        
+                                        SceneDelegate().appRemote.connectionParameters.accessToken = accessToken
+                                        
+                                    }
+                                    
                                 }
                             }
-                            .accentColor(.pink)
-                        
-                
+                        }
+                    TabBar().sessionManager.initiateSession(with: scopes, options: .clientOnly)
+                    TabBar().appRemote.authorizeAndPlayURI(playlistTwo)
+                }
                 LazyVGrid(columns: columns, spacing:20) {
                     VStack() {
                         Image("50numbr")
@@ -121,6 +131,7 @@ struct Search: View {
                             }
                         Text("Vivace Top 50")
                     }
+                    
                     .onTapGesture {
                         
                         var codeVerifier: String = ""
@@ -136,18 +147,14 @@ struct Search: View {
                                         DispatchQueue.main.async {
                                             
                                             SceneDelegate().appRemote.connectionParameters.accessToken = accessToken
-                                            SceneDelegate().appRemote.connect()
                                             
                                         }
                                         
                                     }
                                 }
                             }
-                        sessionManager.initiateSession(with: scopes, options: .clientOnly)
-                        // appRemote.authorizeAndPlayURI(playlistTwo)
-                        
-                                    
-                        
+                        TabBar().sessionManager.initiateSession(with: scopes, options: .clientOnly)
+                        TabBar().appRemote.authorizeAndPlayURI(playlistTwo)
                     }
                     VStack() {
                         Image("chiptune")
@@ -177,19 +184,18 @@ struct Search: View {
                                             
                                             SceneDelegate().appRemote.connectionParameters.accessToken = accessToken
                                             SceneDelegate().appRemote.connect()
-                                            
+                                            SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
                                         }
                                         
                                     }
                                 }
                             }
-                        sessionManager.initiateSession(with: scopes, options: .clientOnly)
-                        appRemote.connect()
+                        TabBar().sessionManager.initiateSession(with: scopes, options: .clientOnly)
+                        TabBar().appRemote.connect()
                         
                         // appRemote.authorizeAndPlayURI(playlistTwo)
-                        appRemote.authorizeAndPlayURI(playlistTwo)
-                                    
-                        
+                        TabBar().appRemote.authorizeAndPlayURI(playlistTwo)
+                          
                     }
                     
                     ForEach(1...10, id: \.self) {index in

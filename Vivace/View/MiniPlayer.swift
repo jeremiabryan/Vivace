@@ -152,6 +152,13 @@ struct MiniPlayer: View {
                         .foregroundColor(.primary)
                         .font(.system(size: 42))
                 })
+                .onTapGesture {
+                    if self.musicPlayer.currentPlaybackTime < 5 {
+                        self.musicPlayer.skipToPreviousItem()
+                    } else {
+                        self.musicPlayer.skipToBeginning()
+                    }
+                }
                     
                 Button(action: {
                       self.playerPaused.toggle()
@@ -172,6 +179,9 @@ struct MiniPlayer: View {
                         .font(.system(size: 42))
                         .foregroundColor(.primary)
                 })
+                .onTapGesture {
+                    self.musicPlayer.skipToNextItem()
+                }
                 }
                 .padding()
                 

@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 
 struct TabBar: View {
     @State var sessionManager = AppDelegate().sessionManager
-    @State var appRemote = AppDelegate().appRemote
+    @State var appRemote = SceneDelegate().appRemote
     @State var expand = false
     @Namespace var animation
     @State private var musicPlayer = MPMusicPlayerController.applicationMusicPlayer
@@ -27,12 +27,11 @@ struct TabBar: View {
                content: {
         
                 TabView(selection: $current) {
-                    Text("Library")
+                    LibraryView()
                         .tag(0)
                         .tabItem {
                             Image(systemName: "rectangle.stack.fill")
                             Text("Library")
-                                
                         }
                     PlaylistsView()
                         .tag(1)
@@ -43,12 +42,9 @@ struct TabBar: View {
                     Search(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                         .tag(2)
                         .tabItem {
-                            Image(systemName: "magnifyingglass")
-                            Text("Search")
+                            Image(systemName: "house.fill")
+                            Text("Home")
                         }
-                    
-                    
- 
                     SearchView(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                         .tag(4)
                         .tabItem {

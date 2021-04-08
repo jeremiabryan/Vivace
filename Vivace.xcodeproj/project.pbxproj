@@ -29,6 +29,10 @@
 		E078D00725D259C500C128AB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D00625D259C500C128AB /* TabBar.swift */; };
 		E078D01425D2654B00C128AB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01325D2654B00C128AB /* BlurView.swift */; };
 		E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E078D01825D2722200C128AB /* MiniPlayer.swift */; };
+		E07D35EF261EEE9A00BCE1E2 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07D35EE261EEE9A00BCE1E2 /* LibraryView.swift */; };
+		E07D35F4261EFDD200BCE1E2 /* spotify-download-logo-30.png in Resources */ = {isa = PBXBuildFile; fileRef = E07D35F3261EFDD200BCE1E2 /* spotify-download-logo-30.png */; };
+		E07D35FC261EFEA500BCE1E2 /* play-button (24)_5ab94929cf6aa.png in Resources */ = {isa = PBXBuildFile; fileRef = E07D35FB261EFEA500BCE1E2 /* play-button (24)_5ab94929cf6aa.png */; };
+		E07D3601261F049D00BCE1E2 /* 17570.png in Resources */ = {isa = PBXBuildFile; fileRef = E07D3600261F049D00BCE1E2 /* 17570.png */; };
 		E0A1027A25D63B9900367F56 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1027925D63B9900367F56 /* Search.swift */; };
 		E0C700D32613F4E2009F4C10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C700D22613F4E2009F4C10 /* SceneDelegate.swift */; };
 		E0C700E326140418009F4C10 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C700E226140418009F4C10 /* SpotifyiOS.framework */; };
@@ -87,6 +91,10 @@
 		E078D00625D259C500C128AB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		E078D01325D2654B00C128AB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		E078D01825D2722200C128AB /* MiniPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayer.swift; sourceTree = "<group>"; };
+		E07D35EE261EEE9A00BCE1E2 /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		E07D35F3261EFDD200BCE1E2 /* spotify-download-logo-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotify-download-logo-30.png"; sourceTree = "<group>"; };
+		E07D35FB261EFEA500BCE1E2 /* play-button (24)_5ab94929cf6aa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button (24)_5ab94929cf6aa.png"; sourceTree = "<group>"; };
+		E07D3600261F049D00BCE1E2 /* 17570.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 17570.png; sourceTree = "<group>"; };
 		E0A1027925D63B9900367F56 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		E0BA9E012613EF9D001E62F2 /* Vivace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vivace-Bridging-Header.h"; sourceTree = "<group>"; };
 		E0C700D22613F4E2009F4C10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +182,9 @@
 				89A1999725D0EA3200FF9206 /* ContentView.swift */,
 				5E5967D12604157C00AB3F7F /* SettingsStoryboard.storyboard */,
 				89A1999925D0EA3300FF9206 /* Assets.xcassets */,
+				E07D3600261F049D00BCE1E2 /* 17570.png */,
+				E07D35FB261EFEA500BCE1E2 /* play-button (24)_5ab94929cf6aa.png */,
+				E07D35F3261EFDD200BCE1E2 /* spotify-download-logo-30.png */,
 				E0C7016E2616A2A7009F4C10 /* file-2.jpg */,
 				E0C7015E26169ECC009F4C10 /* 50numbr.jpg */,
 				89A1999E25D0EA3300FF9206 /* Persistence.swift */,
@@ -213,6 +224,7 @@
 		E078D00525D258AA00C128AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E07D35EE261EEE9A00BCE1E2 /* LibraryView.swift */,
 				E0C700D22613F4E2009F4C10 /* SceneDelegate.swift */,
 				E0090533260AA5BA00F3287D /* Localizable.strings */,
 				E04EB40925EF38310009A5DC /* SwiftyJSON.swift */,
@@ -340,6 +352,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07D3601261F049D00BCE1E2 /* 17570.png in Resources */,
+				E07D35F4261EFDD200BCE1E2 /* spotify-download-logo-30.png in Resources */,
+				E07D35FC261EFEA500BCE1E2 /* play-button (24)_5ab94929cf6aa.png in Resources */,
 				5E5967D22604157C00AB3F7F /* SettingsStoryboard.storyboard in Resources */,
 				E0090534260AA5BA00F3287D /* Localizable.strings in Resources */,
 				89A1999D25D0EA3300FF9206 /* Preview Assets.xcassets in Resources */,
@@ -387,6 +402,7 @@
 				E078D00725D259C500C128AB /* TabBar.swift in Sources */,
 				8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */,
 				E0C700D32613F4E2009F4C10 /* SceneDelegate.swift in Sources */,
+				E07D35EF261EEE9A00BCE1E2 /* LibraryView.swift in Sources */,
 				E0C701392616232F009F4C10 /* AppDelegate.swift in Sources */,
 				E078D01425D2654B00C128AB /* BlurView.swift in Sources */,
 			);

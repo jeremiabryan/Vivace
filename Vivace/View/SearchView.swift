@@ -18,7 +18,17 @@ struct SearchView: View {
     @Binding var currentSong: Song
     
     var body: some View {
-        VStack {
+        VStack(spacing: 18) {
+            HStack() {
+                Text("Search")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.primary)
+                Spacer(minLength: 0)
+            }
+            HStack(spacing: 15) {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(.primary)
             TextField("Search Songs", text: $searchText, onCommit: {
                 UIApplication.shared.resignFirstResponder()
                 if self.searchText.isEmpty {
@@ -35,10 +45,11 @@ struct SearchView: View {
                     }
                 }
             })
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .padding(.horizontal, 16)
-            .accentColor(.pink)
-            
+            }
+            .padding(.vertical, 10)
+            .padding(.horizontal)
+            .background(Color.primary.opacity(0.06))
+            .cornerRadius(15)
             List {
                 ForEach(searchResults, id:\.id) { song in
                     HStack {
