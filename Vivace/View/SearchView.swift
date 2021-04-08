@@ -26,30 +26,35 @@ struct SearchView: View {
                     .foregroundColor(.primary)
                 Spacer(minLength: 0)
             }
-            HStack(spacing: 15) {
-            Image(systemName: "magnifyingglass")
-                .foregroundColor(.primary)
-            TextField("Search Songs", text: $searchText, onCommit: {
-                UIApplication.shared.resignFirstResponder()
-                if self.searchText.isEmpty {
-                    self.searchResults = []
-                } else {
-                    SKCloudServiceController.requestAuthorization { (status) in
-                        if status == .authorized {
-                            // does not freeze and crash because thredz
-                            DispatchQueue.global(qos: .background).async {
-                                self.searchResults = AppleMusicAPI().searchAppleMusic(self.searchText)
+            .padding(.horizontal, 10)
+            VStack() {
+                HStack(spacing: 15) {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.primary)
+                TextField("Search Songs", text: $searchText, onCommit: {
+                    UIApplication.shared.resignFirstResponder()
+                    if self.searchText.isEmpty {
+                        self.searchResults = []
+                    } else {
+                        SKCloudServiceController.requestAuthorization { (status) in
+                            if status == .authorized {
+                                // does not freeze and crash because thredz
+                                DispatchQueue.global(qos: .background).async {
+                                    self.searchResults = AppleMusicAPI().searchAppleMusic(self.searchText)
+                                }
+                                
                             }
-                            
                         }
                     }
+                })
                 }
-            })
+                .padding(.vertical, 10)
+                .padding(.horizontal)
+                .background(Color.primary.opacity(0.06))
+                .cornerRadius(15)
             }
-            .padding(.vertical, 10)
-            .padding(.horizontal)
-            .background(Color.primary.opacity(0.06))
-            .cornerRadius(15)
+            .padding(.horizontal, 10)
+            
             List {
                 ForEach(searchResults, id:\.id) { song in
                     HStack {

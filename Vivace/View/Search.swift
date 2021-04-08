@@ -95,7 +95,6 @@ struct Search: View {
                     Text("Now Playing on Spotify")
                 }
                 .onTapGesture {
-                    
                     var codeVerifier: String = ""
                         var responseTypeCode: String? {
                             didSet {

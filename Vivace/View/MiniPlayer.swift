@@ -49,7 +49,10 @@ struct MiniPlayer: View {
                 }
                 
                 WebImage(url:
-                            MPMusicPlayerController.applicationMusicPlayer.playbackState == .playing ?
+                            // it was .playbackState == .playing ?;
+                            // use that if we encounter issues with nowPlayingItem != nil, but
+                            // this should allow you to maintain album art when paused
+                            (MPMusicPlayerController.applicationMusicPlayer.nowPlayingItem != nil) ?
                             URL(string:
                                     self.currentSong.artworkURL
                                     .replacingOccurrences(of: "{w}",
