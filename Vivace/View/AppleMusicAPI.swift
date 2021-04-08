@@ -41,6 +41,35 @@ class AppleMusicAPI {
             return storefrontID
         }
     
+    func getUserPlaylists() -> [Song] {
+        let lock = DispatchSemaphore(value: 0)
+        var songs = [Song]()
+        let musicURL = URL(string: "https://api.music.apple.com/v1/me/library/playlists")!
+        var musicRequest = URLRequest(url: musicURL)
+        musicRequest.httpMethod = "GET"
+        //musicRequest.addValue("Bearer \(developerToken)", forHTTPHeaderField: "Authorization")
+        //musicRequest.addValue(getUserToken(), forHTTPHeaderField: "Music-User-Token")
+        
+        URLSession.shared.dataTask(with: musicRequest) { (data, response, error) in
+            guard error == nil else { return }
+            if let json = try? JSON(data: data!) {
+                let result = (json["results"]["songs"]["data"]).array!
+                for song in result {
+                    let attributes = song["attributes"]
+                    let currentSong = Song(id: attributes["playParams"]["id"].string!, name: attributes["name"].string!, artistName: attributes["artistName"].string!, artworkURL: attributes["artwork"]["url"].string!)
+                    songs.append(currentSong)
+                }
+                lock.signal()
+            } else {
+                lock.signal()
+            }
+        }.resume()
+        
+        lock.wait()
+        return songs
+        
+    }
+    
     func getUserToken() -> String {
             var userToken = String()
             

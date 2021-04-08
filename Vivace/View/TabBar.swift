@@ -12,7 +12,8 @@ import SDWebImageSwiftUI
 
 struct TabBar: View {
     @State var sessionManager = AppDelegate().sessionManager
-    @State var appRemote = SceneDelegate().appRemote
+    // if you change this to SceneDelegate(), it takes forever to initialize... hmm why
+    // @State var appRemote = SceneDelegate().appRemote
     @State var expand = false
     @Namespace var animation
     @State private var musicPlayer = MPMusicPlayerController.applicationMusicPlayer

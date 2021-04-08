@@ -94,6 +94,7 @@ struct Search: View {
                     .cornerRadius(15.0)
                     Text("Now Playing on Spotify")
                 }
+                .shadow(radius: 5)
                 .onTapGesture {
                     var codeVerifier: String = ""
                         var responseTypeCode: String? {
@@ -114,8 +115,8 @@ struct Search: View {
                                 }
                             }
                         }
-                    TabBar().sessionManager.initiateSession(with: scopes, options: .clientOnly)
-                    TabBar().appRemote.authorizeAndPlayURI(playlistTwo)
+                    AppDelegate().sessionManager.initiateSession(with: scopes, options: .clientOnly)
+                    SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
                 }
                 LazyVGrid(columns: columns, spacing:20) {
                     VStack() {
@@ -152,8 +153,8 @@ struct Search: View {
                                     }
                                 }
                             }
-                        TabBar().sessionManager.initiateSession(with: scopes, options: .clientOnly)
-                        TabBar().appRemote.authorizeAndPlayURI(playlistTwo)
+                        AppDelegate().sessionManager.initiateSession(with: scopes, options: .clientOnly)
+                        SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
                     }
                     VStack() {
                         Image("chiptune")
@@ -189,11 +190,11 @@ struct Search: View {
                                     }
                                 }
                             }
-                        TabBar().sessionManager.initiateSession(with: scopes, options: .clientOnly)
-                        TabBar().appRemote.connect()
+                        AppDelegate().sessionManager.initiateSession(with: scopes, options: .clientOnly)
+                        SceneDelegate().appRemote.connect()
                         
                         // appRemote.authorizeAndPlayURI(playlistTwo)
-                        TabBar().appRemote.authorizeAndPlayURI(playlistTwo)
+                        SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
                           
                     }
                     

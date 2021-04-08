@@ -76,7 +76,6 @@ struct SearchView: View {
                         Button(action: {
                             self.currentSong = song
                             MiniPlayer.songName = song.name
-                            
                             self.musicPlayer.setQueue(with: [song.id])
                             self.musicPlayer.play()
                         }) {
