@@ -28,18 +28,18 @@ struct TabBar: View {
                content: {
         
                 TabView(selection: $current) {
-                    LibraryView()
-                        .tag(0)
-                        .tabItem {
-                            Image(systemName: "rectangle.stack.fill")
-                            Text("Library")
-                        }
-                    PlaylistsView()
-                        .tag(1)
-                        .tabItem {
-                            Image(systemName: "music.note.list")
-                            Text("Playlists")
-                        }
+//                    LibraryView()
+//                        .tag(0)
+//                        .tabItem {
+//                            Image(systemName: "rectangle.stack.fill")
+//                            Text("Library")
+//                        }
+//                    PlaylistsView()
+//                        .tag(1)
+//                        .tabItem {
+//                            Image(systemName: "music.note.list")
+//                            Text("Playlists")
+//                        }
                     Search(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                         .tag(2)
                         .tabItem {
@@ -52,12 +52,12 @@ struct TabBar: View {
                             Image(systemName: "magnifyingglass")
                             Text("Search")
                         }
-                    SettingsView()
-                        .tag(5)
-                        .tabItem {
-                            Image(systemName: "gearshape")
-                            Text("Settings")
-                        }
+//                    SettingsView()
+//                        .tag(5)
+//                        .tabItem {
+//                            Image(systemName: "gearshape")
+//                            Text("Settings")
+//                        }
                     
                 }
                 // Let's decorate our TabView!
