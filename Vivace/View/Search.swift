@@ -29,7 +29,15 @@ struct Search: View {
                         ]
     private let spotifyClientId = NSLocalizedString("spotifyClientID", comment: "")
     private let spotifyClientSecretKey = NSLocalizedString("spotifyClientSecret", comment: "")
-    
+    var defaultCallback: SPTAppRemoteCallback {
+            get {
+                return {[self] _, error in
+                    if let error = error {
+                        print("error in defaultCallback")
+                    }
+                }
+            }
+        }
     var scopes: SPTScope = [.userReadEmail, .userReadPrivate,
     .userReadPlaybackState, .userModifyPlaybackState,
     .userReadCurrentlyPlaying, .streaming, .appRemoteControl,
@@ -59,6 +67,7 @@ struct Search: View {
                 }
             }
         }
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 18) {
@@ -117,7 +126,7 @@ struct Search: View {
                             }
                         }
                     AppDelegate().sessionManager.initiateSession(with: scopes, options: .clientOnly)
-                    SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
+                    // SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
                 }
                 LazyVGrid(columns: columns, spacing:20) {
                     VStack() {
@@ -151,28 +160,7 @@ struct Search: View {
                     // .shadow(radius: 5)
                     
                     .onTapGesture {
-                        
-                        var codeVerifier: String = ""
-                            var responseTypeCode: String? {
-                                didSet {
-                                    fetchSpotifyToken { (dictionary, error) in
-                                        if let error = error {
-                                            print("Fetching token request error \(error)")
-                                            return
-                                        }
-                                        let accessToken = dictionary!["access_token"] as! String
-                                        
-                                        DispatchQueue.main.async {
-                                            
-                                            SceneDelegate().appRemote.connectionParameters.accessToken = accessToken
-                                            
-                                        }
-                                        
-                                    }
-                                }
-                            }
-                        AppDelegate().sessionManager.initiateSession(with: scopes, options: .clientOnly)
-                        SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
+                        AppDelegate().appRemote.playerAPI?.skip(toNext: defaultCallback)
                     }
                     VStack() {
                         ZStack(alignment: .bottomTrailing) {
@@ -206,33 +194,11 @@ struct Search: View {
                     // .shadow(radius: 5)
                     
                     .onTapGesture {
-                        AppDelegate().playURI = playlistTwo
-                        var codeVerifier: String = ""
-                            var responseTypeCode: String? {
-                                didSet {
-                                    fetchSpotifyToken { (dictionary, error) in
-                                        if let error = error {
-                                            print("Fetching token request error \(error)")
-                                            return
-                                        }
-                                        let accessToken = dictionary!["access_token"] as! String
-                                        
-                                        DispatchQueue.main.async {
-                                            
-                                            SceneDelegate().appRemote.connectionParameters.accessToken = accessToken
-                                            SceneDelegate().appRemote.connect()
-                                            SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
-                                        }
-                                        
-                                    }
-                                }
-                            }
-                        AppDelegate().sessionManager.initiateSession(with: scopes, options: .clientOnly)
-                        SceneDelegate().appRemote.connect()
+                        AppDelegate().appRemote.playerAPI?.skip(toNext: defaultCallback)
+                        ///appRemote.playerAPI?.pause(defaultCallback)
+                                    
+
                         
-                        // appRemote.authorizeAndPlayURI(playlistTwo)
-                        SceneDelegate().appRemote.authorizeAndPlayURI(playlistTwo)
-                          
                     }
                     
                     VStack() {
@@ -272,15 +238,19 @@ struct Search: View {
                     }
                     .onTapGesture {
                         musicPlayer.stop()
-                        // for some reason, some songs throw an error 6 (failed to prepare to play) here
-                        // if that happens, try another song,
-                        // but definitely TODO: notify user if that happens
+//                         for some reason, some songs throw an error 6 (failed to prepare to play) here
+//                         if that happens, try another song,
+//                         but definitely TODO: notify user if that happens
                         musicPlayer.setQueue(with: ["475670122", "271978749",
                                                     "271978749", "724456984",
                                                     "1032913975"])
+                        //musicPlayer.setQueue(with: ["p.3VKWWQWCR8BeMA"])
                             // MiniPlayer.setCurrentSong(Song)
                         musicPlayer.prepareToPlay()
                         musicPlayer.play()
+                        DispatchQueue.global(qos: .background).async {
+                           
+                        }
                         
                     }
                     

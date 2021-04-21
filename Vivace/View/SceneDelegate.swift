@@ -53,6 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,
 
     func sceneDidBecomeActive(_ scene: UIScene) {
         connect();
+        print("scenedidbecomeactive")
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

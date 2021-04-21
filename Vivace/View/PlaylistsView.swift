@@ -16,13 +16,35 @@ var scopes: SPTScope = [.userReadEmail, .userReadPrivate,
 .userFollowRead, .userFollowModify,]
 
 struct PlaylistsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        
-        
-     
-    }
+    @State var msg: String = ""
+    @ObservedObject var observedPlaylist = ObservedPlaylist(playlists: [Playlist]())
+      var body: some View {
+        List {
+            Button("Press me") {
+                
+            }
+            .onTapGesture {
+            }
+            ForEach(observedPlaylist.getPlaylists(), id:\.id) { playlist in
+                HStack {
+                    
+                        
+                    VStack(alignment: .leading) {
+                        Text(playlist.name)
+                            .font(.headline)
+                        Text(playlist.id)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .environmentObject(observedPlaylist)
+            }
+        }
+      }
+    
+
 }
+
 
 struct PlaylistsView_Previews: PreviewProvider {
     static var previews: some View {

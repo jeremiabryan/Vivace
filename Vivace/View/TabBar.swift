@@ -34,12 +34,12 @@ struct TabBar: View {
 //                            Image(systemName: "rectangle.stack.fill")
 //                            Text("Library")
 //                        }
-//                    PlaylistsView()
-//                        .tag(1)
-//                        .tabItem {
-//                            Image(systemName: "music.note.list")
-//                            Text("Playlists")
-//                        }
+                    PlaylistsView()
+                        .tag(1)
+                        .tabItem {
+                            Image(systemName: "music.note.list")
+                            Text("Playlists")
+                        }
                     Search(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                         .tag(2)
                         .tabItem {
@@ -73,9 +73,10 @@ struct TabBar: View {
                             // print the JSON payload
                             // TODO: actual lib things here
                             DispatchQueue.global(qos: .background).async {
-                               print(AppleMusicAPI().fetchStorefrontID()) 
+                               print(AppleMusicAPI().fetchStorefrontID())
+                                print(AppleMusicAPI().getUserPlaylists())
                             }
-            
+                            
                         }
                     }
                     // SPOTIFY ACCESS:

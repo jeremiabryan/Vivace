@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
     )
     
     
+    
     lazy var sessionManager: SPTSessionManager = {
         if let tokenSwapURL = URL(string: "http://localhost:1234/swap"),
            let tokenRefreshURL = URL(string: "http://localhost:1234/refresh") {
@@ -28,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
             self.configuration.tokenRefreshURL = tokenRefreshURL
             // This will determine the song that plays upon authorization
             self.configuration.playURI = self.playURI
-            //self.configuration.playURI = ""
+            self.configuration.playURI = "spotify:playlist:137E6KBEACEjDWve3W6cgq"
         }
         let manager = SPTSessionManager(configuration: self.configuration, delegate: self)
         return manager
@@ -76,12 +77,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
             }
         })
         
-       // Want to play a new track?
-       // self.appRemote.playerAPI?.play("spotify:track:13WO20hoD72L0J13WTQWlT", callback: { (result, error) in
-       //     if let error = error {
-       //         print(error.localizedDescription)
-       //     }
-       // })
+        //
+        self.appRemote.playerAPI?.play("spotify:track:13WO20hoD72L0J13WTQWlT", callback: { (result, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        })
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
