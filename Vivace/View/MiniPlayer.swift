@@ -63,7 +63,7 @@ struct MiniPlayer: View {
                             : URL(string: "https://i.imgur.com/5def0zoh.jpg")
                 )
                                     .resizable()
-                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: expand ? height: 55, height: expand ? height: 55)
                     .cornerRadius(expand ? 10 : 90)
                                     .shadow(radius: 10)
@@ -76,6 +76,7 @@ struct MiniPlayer: View {
                         //.fontWeight(.bold)
                         .matchedGeometryEffect(id: "Label", in: animation)
                 }
+                
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 if (!expand) {
                     
@@ -124,11 +125,11 @@ struct MiniPlayer: View {
                     }
                     }
                     Spacer(minLength: 0)
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Image(systemName: "ellipsis.circle")
-                            .font(.title2)
-                            .foregroundColor(.primary)
-                    })
+//                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+//                        Image(systemName: "ellipsis.circle")
+//                            .font(.title2)
+//                            .foregroundColor(.primary)
+//                    })
                     
                 }
                 .padding(.top, 20)
@@ -192,41 +193,41 @@ struct MiniPlayer: View {
                 Spacer(minLength: 0)
                
                 HStack(spacing: 0) {
-                    Image(systemName: "speaker.fill")
-                        .font(.system(size: 16))
+//                    Image(systemName: "speaker.fill")
+//                        .font(.system(size: 16))
                         
                     VolumeSlider()
                         .padding(.horizontal)
                         .foregroundColor(.primary)
                     
-                    Image(systemName: "speaker.wave.2.fill")
-                        .font(.system(size: 16))
+//                    Image(systemName: "speaker.wave.2.fill")
+//                        .font(.system(size: 16))
                     
                 }
                 .padding()
-                HStack(spacing: 25) {
-                    Button(action: {}) {
-                        Image(systemName: "arrow.up.message")
-                    
-                            .font(.title2)
-                            .foregroundColor(.primary)
-                    }
-                    Button(action: {}) {
-                        Image(systemName: "airplayaudio")
-                    
-                            .font(.title2)
-                            .foregroundColor(.primary)
-                    }
-                    Button(action: {}) {
-                        Image(systemName: "list.bullet")
-                    
-                            .font(.title2)
-                            .foregroundColor(.primary)
-                    }
-                    
-                    
-                }
-                .padding(.bottom, safeArea?.bottom == 0 ? 15 : safeArea?.bottom)
+//                HStack(spacing: 25) {
+//                    Button(action: {}) {
+//                        Image(systemName: "arrow.up.message")
+//
+//                            .font(.title2)
+//                            .foregroundColor(.primary)
+//                    }
+//                    Button(action: {}) {
+//                        Image(systemName: "airplayaudio")
+//
+//                            .font(.title2)
+//                            .foregroundColor(.primary)
+//                    }
+//                    Button(action: {}) {
+//                        Image(systemName: "list.bullet")
+//
+//                            .font(.title2)
+//                            .foregroundColor(.primary)
+//                    }
+//
+//
+//                }
+//                .padding(.bottom, safeArea?.bottom == 0 ? 15 : safeArea?.bottom)
             }
             .frame(height: expand ? nil : 0)
             .opacity(expand ? 1 : 0)
