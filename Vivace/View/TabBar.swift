@@ -28,18 +28,19 @@ struct TabBar: View {
                content: {
         
                 TabView(selection: $current) {
-//                    LibraryView()
-//                        .tag(0)
-//                        .tabItem {
-//                            Image(systemName: "rectangle.stack.fill")
-//                            Text("Library")
-//                        }
-                    PlaylistsView()
-                        .tag(1)
+//
+                    MoreInfoCREATE()
+                        .tag(0)
                         .tabItem {
-                            Image(systemName: "music.note.list")
-                            Text("Playlists")
+                            Image(systemName: "tortoise.fill")
+                            Text("Project Info")
                         }
+//                    PlaylistsView()
+//                        .tag(1)
+//                        .tabItem {
+//                            Image(systemName: "music.note.list")
+//                            Text("Playlists")
+//                        }
                     Search(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
                         .tag(2)
                         .tabItem {
@@ -47,7 +48,7 @@ struct TabBar: View {
                             Text("Home")
                         }
                     SearchView(musicPlayer: self.$musicPlayer, currentSong: self.$currentSong)
-                        .tag(4)
+                        .tag(3)
                         .tabItem {
                             Image(systemName: "magnifyingglass")
                             Text("Search")
