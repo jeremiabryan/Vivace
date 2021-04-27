@@ -34,6 +34,7 @@ First, open Xcode and clone this project.
 
 ## Known Issues
 
+* Apple Music is **required** in order to currently use Now Playing and Search. App will hang and possibly crash.
 * Music player repeats until stopped
 * MiniPlayer stays above keyboard
 * SearchView cannot scroll, possibly make it into table
