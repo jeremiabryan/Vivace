@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Google
 
 struct SourceView: View {
 
     let script = AppleMusicAPI()
     let newScript = SceneDelegate()
+    
+    let appDel = AppDelegate()
+    
     
     func appleMusicAuth() -> String {
         let myString = "Apple Music is Connected"
@@ -37,6 +41,12 @@ struct SourceView: View {
         NavigationView{
             
             VStack{
+                
+                //redirect to youtube sign in page
+                NavigationLink(destination: Webview(url: "https://accounts.spotify.com/authorize?"), label: {
+                    Image("NewSpotifyRectangle")
+                        
+            })
                 Text(spotifyAuth())
                     .offset(x:-100, y: 300)
                     .font(.title)
@@ -54,7 +64,6 @@ struct SourceView: View {
                             .offset(y: -50)
                             
                     })
-                }
                 
             }
             .navigationTitle("Select Source")
@@ -67,4 +76,5 @@ struct SourceView_Previews: PreviewProvider {
     static var previews: some View {
         SourceView()
     }
+}
 }

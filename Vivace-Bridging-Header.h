@@ -10,3 +10,4 @@
 
 // #endif /* Vivace_Bridging_Header_h */
 #import <SpotifyiOS/SpotifyiOS.h>
+#import <GTLRYouTube.h>

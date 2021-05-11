@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14D5FFCC700B5D30411A55B1 /* libPods-Vivace.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D27D114EAA41509813B89087 /* libPods-Vivace.a */; };
 		5E5967C2260401ED00AB3F7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5E5967C1260401ED00AB3F7F /* Settings.bundle */; };
 		5E5967C72604090F00AB3F7F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5967C62604090F00AB3F7F /* SettingsView.swift */; };
 		5E5967D22604157C00AB3F7F /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5967D12604157C00AB3F7F /* SettingsStoryboard.storyboard */; };
@@ -14,6 +15,11 @@
 		5E95CF47264A20AE0034B1B8 /* NewSpotifyRectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CF46264A20AE0034B1B8 /* NewSpotifyRectangle.png */; };
 		5E95CF4C264A20BC0034B1B8 /* appleMusicRectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CF4B264A20BC0034B1B8 /* appleMusicRectangle.png */; };
 		5E95CF51264A25300034B1B8 /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CF50264A25300034B1B8 /* Webview.swift */; };
+		5E95CF73264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CF72264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist */; };
+		5E95CF74264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CF72264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist */; };
+		5E95CF75264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CF72264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist */; };
+		5E95CFBC264B1FB10034B1B8 /* YouTubeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CFBB264B1FB10034B1B8 /* YouTubeConfig.swift */; };
+		5E95CFC1264B210A0034B1B8 /* YouTubeTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CFC0264B210A0034B1B8 /* YouTubeTokenResponse.swift */; };
 		8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8987E7052603E2A20024AF2C /* PlaylistsView.swift */; };
 		8987E7092603F8500024AF2C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8987E7082603F8500024AF2C /* SDWebImageSwiftUI */; };
 		89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999525D0EA3200FF9206 /* VivaceApp.swift */; };
@@ -67,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08AF8F5844D71F4081F59B8F /* Pods-Vivace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vivace.debug.xcconfig"; path = "Target Support Files/Pods-Vivace/Pods-Vivace.debug.xcconfig"; sourceTree = "<group>"; };
 		5E5967C1260401ED00AB3F7F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = View/Settings.bundle; sourceTree = "<group>"; };
 		5E5967C62604090F00AB3F7F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5E5967D12604157C00AB3F7F /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -74,6 +81,9 @@
 		5E95CF46264A20AE0034B1B8 /* NewSpotifyRectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NewSpotifyRectangle.png; path = ../../../Downloads/NewSpotifyRectangle.png; sourceTree = "<group>"; };
 		5E95CF4B264A20BC0034B1B8 /* appleMusicRectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appleMusicRectangle.png; path = ../../../Downloads/appleMusicRectangle.png; sourceTree = "<group>"; };
 		5E95CF50264A25300034B1B8 /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
+		5E95CF72264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
+		5E95CFBB264B1FB10034B1B8 /* YouTubeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeConfig.swift; sourceTree = "<group>"; };
+		5E95CFC0264B210A0034B1B8 /* YouTubeTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeTokenResponse.swift; sourceTree = "<group>"; };
 		8961B08325FC897800525761 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8987E7052603E2A20024AF2C /* PlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsView.swift; sourceTree = "<group>"; };
 		89A1999225D0EA3200FF9206 /* Vivace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vivace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +102,8 @@
 		89A199B925D0EA3300FF9206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89D8295A263879220042B841 /* MoreInfoCREATE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoCREATE.swift; sourceTree = "<group>"; };
 		89F79E152604328A00E6A690 /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
+		B1CAEA57B62D25D758B0A855 /* Pods-Vivace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vivace.release.xcconfig"; path = "Target Support Files/Pods-Vivace/Pods-Vivace.release.xcconfig"; sourceTree = "<group>"; };
+		D27D114EAA41509813B89087 /* libPods-Vivace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Vivace.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0322DC2261F3D4800B625B4 /* albumblue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albumblue.jpg; sourceTree = "<group>"; };
 		E042F03F262FD54A00D6855F /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		E042F049262FF57700D6855F /* ObservedPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedPlaylist.swift; sourceTree = "<group>"; };
@@ -123,6 +135,7 @@
 			files = (
 				8987E7092603F8500024AF2C /* SDWebImageSwiftUI in Frameworks */,
 				E042F04F262FF81400D6855F /* SpotifyiOS.framework in Frameworks */,
+				14D5FFCC700B5D30411A55B1 /* libPods-Vivace.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +167,7 @@
 		89A1998925D0EA3200FF9206 = {
 			isa = PBXGroup;
 			children = (
+				5E95CF72264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist */,
 				E042F04E262FF81400D6855F /* SpotifyiOS.framework */,
 				E0BA9E012613EF9D001E62F2 /* Vivace-Bridging-Header.h */,
 				89A1999425D0EA3200FF9206 /* Vivace */,
@@ -161,6 +175,8 @@
 				89A199B625D0EA3300FF9206 /* VivaceUITests */,
 				89A1999325D0EA3200FF9206 /* Products */,
 				890D9A2F26099D2C003355C3 /* Recovered References */,
+				BCEEF51AEA04F3590378166E /* Pods */,
+				93F8C32458DC2D714861F948 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +243,23 @@
 			path = VivaceUITests;
 			sourceTree = "<group>";
 		};
+		93F8C32458DC2D714861F948 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D27D114EAA41509813B89087 /* libPods-Vivace.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCEEF51AEA04F3590378166E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08AF8F5844D71F4081F59B8F /* Pods-Vivace.debug.xcconfig */,
+				B1CAEA57B62D25D758B0A855 /* Pods-Vivace.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E078D00525D258AA00C128AB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +281,8 @@
 				E0C701462616321C009F4C10 /* ViewController.swift */,
 				89D8295A263879220042B841 /* MoreInfoCREATE.swift */,
 				5E95CF41264A1DB40034B1B8 /* SourceView.swift */,
+				5E95CFBB264B1FB10034B1B8 /* YouTubeConfig.swift */,
+				5E95CFC0264B210A0034B1B8 /* YouTubeTokenResponse.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,9 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89A199BC25D0EA3300FF9206 /* Build configuration list for PBXNativeTarget "Vivace" */;
 			buildPhases = (
+				1FBAAB404F573C3942848780 /* [CP] Check Pods Manifest.lock */,
 				89A1998E25D0EA3200FF9206 /* Sources */,
 				89A1998F25D0EA3200FF9206 /* Frameworks */,
 				89A1999025D0EA3200FF9206 /* Resources */,
+				A1ADF03F2C7A3C261EA3B385 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,6 +406,7 @@
 				89A1999D25D0EA3300FF9206 /* Preview Assets.xcassets in Resources */,
 				5E5967C2260401ED00AB3F7F /* Settings.bundle in Resources */,
 				5E95CF47264A20AE0034B1B8 /* NewSpotifyRectangle.png in Resources */,
+				5E95CF73264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist in Resources */,
 				89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */,
 				E0C7015F26169ECC009F4C10 /* 50numbr.jpg in Resources */,
 				5E95CF4C264A20BC0034B1B8 /* appleMusicRectangle.png in Resources */,
@@ -380,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E95CF74264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,10 +426,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E95CF75264B00770034B1B8 /* client_116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FBAAB404F573C3942848780 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vivace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1ADF03F2C7A3C261EA3B385 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vivace/Pods-Vivace-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vivace/Pods-Vivace-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vivace/Pods-Vivace-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		89A1998E25D0EA3200FF9206 /* Sources */ = {
@@ -401,6 +483,7 @@
 				5E5967C72604090F00AB3F7F /* SettingsView.swift in Sources */,
 				89F79E162604328A00E6A690 /* VolumeView.swift in Sources */,
 				89A1999F25D0EA3300FF9206 /* Persistence.swift in Sources */,
+				5E95CFC1264B210A0034B1B8 /* YouTubeTokenResponse.swift in Sources */,
 				89A199A225D0EA3300FF9206 /* Vivace.xcdatamodeld in Sources */,
 				89A1999825D0EA3200FF9206 /* ContentView.swift in Sources */,
 				89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */,
@@ -413,6 +496,7 @@
 				E04EB40A25EF38320009A5DC /* SwiftyJSON.swift in Sources */,
 				E0C701472616321C009F4C10 /* ViewController.swift in Sources */,
 				5E95CF42264A1DB40034B1B8 /* SourceView.swift in Sources */,
+				5E95CFBC264B1FB10034B1B8 /* YouTubeConfig.swift in Sources */,
 				89D8295B263879220042B841 /* MoreInfoCREATE.swift in Sources */,
 				E078D00725D259C500C128AB /* TabBar.swift in Sources */,
 				8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */,
@@ -578,6 +662,7 @@
 		};
 		89A199BD25D0EA3300FF9206 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08AF8F5844D71F4081F59B8F /* Pods-Vivace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -606,6 +691,7 @@
 		};
 		89A199BE25D0EA3300FF9206 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1CAEA57B62D25D758B0A855 /* Pods-Vivace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

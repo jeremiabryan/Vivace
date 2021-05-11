@@ -6,6 +6,8 @@
 //  Copyright © 2018 Spotify for Developers. All rights reserved.
 //
 import UIKit
+import GoogleSignIn
+import Google
 
 //@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate {
@@ -14,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
     
     let SpotifyClientID = NSLocalizedString("spotifyClientID", comment: "")
     let SpotifyRedirectURL = URL(string: "vivace://redirect/")!
+    
+    let signInButton = GIDSignInButton(frame: CGRect())
     
     lazy var configuration = SPTConfiguration(
         clientID: SpotifyClientID,
@@ -41,18 +45,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
         return appRemote
     }()
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        // Initialize Google sign-in.
+        GIDSignIn.sharedInstance().clientID = "116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c.apps.googleusercontent.com"
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let requestedScopes: SPTScope = [.appRemoteControl]
         self.sessionManager.initiateSession(with: requestedScopes, options: .default)
-
-        return true
+        return GIDSignIn.sharedInstance().handle(url,
+                                                 sourceApplication: sourceApplication,
+                                                 annotation: annotation) && true
     }
     
+    @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         self.sessionManager.application(app, open: url, options: options)
-        
-        return true
+        let sourceApplication = options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String
+        let annotation = options[UIApplication.OpenURLOptionsKey.annotation]
+        return GIDSignIn.sharedInstance().handle(url,
+                                                 sourceApplication: sourceApplication,
+                                                 annotation: annotation) && true
     }
     
     func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {

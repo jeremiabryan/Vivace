@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<string>Vivace-GGC.Vivace</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -22,10 +22,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.vivace.vivaceapp</string>
+			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>vivace</string>
+				<string>com.googleusercontent.apps.116550118079-n2uiv49s6fbf376u7hpdvufvr3aacl8c</string>
 			</array>
 		</dict>
 	</array>
