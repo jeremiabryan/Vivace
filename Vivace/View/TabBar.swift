@@ -38,7 +38,7 @@ struct TabBar: View {
                     SourceView()
                         .tag(1)
                         .tabItem {
-                            Image(systemName: "magnifyingglass")
+                            Image(systemName: "square.and.arrow.down.on.square.fill")
                             Text("Source")
                         }
 //                    PlaylistsView()

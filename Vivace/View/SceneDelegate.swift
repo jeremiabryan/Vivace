@@ -6,6 +6,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,
         //
     }
     
+    var myBool = false
+    
+    func isAuthenticated() -> Bool{
+        let newBool = myBool
+        return newBool
+    }
+    
 
     static private let kAccessTokenKey = "access-token-key"
     private let redirectUri = URL(string:"vivace://redirect/")!
@@ -77,6 +84,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,
 
    
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
+        myBool = true
         print("connected scenedelegate")
         self.appRemote.playerAPI?.delegate = self
           self.appRemote.playerAPI?.subscribe(toPlayerState: { (result, error) in

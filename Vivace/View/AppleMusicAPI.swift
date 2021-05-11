@@ -11,6 +11,13 @@ class AppleMusicAPI {
     // Localizable.strings should be used to specify this token
     let developerToken = NSLocalizedString("developerToken", comment: "")
     
+    var myBool = false
+    
+    func isAuthenticated() -> Bool{
+        let newBool = myBool
+        return newBool
+    }
+    
     func fetchStorefrontID() -> String {
         
         
@@ -38,6 +45,7 @@ class AppleMusicAPI {
             }.resume()
             
             lock.wait()
+            myBool = true
             return storefrontID
         }
     
