@@ -10,10 +10,6 @@
 		5E5967C2260401ED00AB3F7F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5E5967C1260401ED00AB3F7F /* Settings.bundle */; };
 		5E5967C72604090F00AB3F7F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5967C62604090F00AB3F7F /* SettingsView.swift */; };
 		5E5967D22604157C00AB3F7F /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5967D12604157C00AB3F7F /* SettingsStoryboard.storyboard */; };
-		5E95CF42264A1DB40034B1B8 /* SourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CF41264A1DB40034B1B8 /* SourceView.swift */; };
-		5E95CF47264A20AE0034B1B8 /* NewSpotifyRectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CF46264A20AE0034B1B8 /* NewSpotifyRectangle.png */; };
-		5E95CF4C264A20BC0034B1B8 /* appleMusicRectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CF4B264A20BC0034B1B8 /* appleMusicRectangle.png */; };
-		5E95CF51264A25300034B1B8 /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CF50264A25300034B1B8 /* Webview.swift */; };
 		8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8987E7052603E2A20024AF2C /* PlaylistsView.swift */; };
 		8987E7092603F8500024AF2C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8987E7082603F8500024AF2C /* SDWebImageSwiftUI */; };
 		89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1999525D0EA3200FF9206 /* VivaceApp.swift */; };
@@ -24,6 +20,7 @@
 		89A199A225D0EA3300FF9206 /* Vivace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89A199A025D0EA3300FF9206 /* Vivace.xcdatamodeld */; };
 		89A199AD25D0EA3300FF9206 /* VivaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A199AC25D0EA3300FF9206 /* VivaceTests.swift */; };
 		89A199B825D0EA3300FF9206 /* VivaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A199B725D0EA3300FF9206 /* VivaceUITests.swift */; };
+		89D829572638705F0042B841 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89D829562638705F0042B841 /* Localizable.strings */; };
 		89D8295B263879220042B841 /* MoreInfoCREATE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D8295A263879220042B841 /* MoreInfoCREATE.swift */; };
 		89F79E162604328A00E6A690 /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F79E152604328A00E6A690 /* VolumeView.swift */; };
 		E0322DC3261F3D4800B625B4 /* albumblue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0322DC2261F3D4800B625B4 /* albumblue.jpg */; };
@@ -70,10 +67,6 @@
 		5E5967C1260401ED00AB3F7F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = View/Settings.bundle; sourceTree = "<group>"; };
 		5E5967C62604090F00AB3F7F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5E5967D12604157C00AB3F7F /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
-		5E95CF41264A1DB40034B1B8 /* SourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceView.swift; sourceTree = "<group>"; };
-		5E95CF46264A20AE0034B1B8 /* NewSpotifyRectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NewSpotifyRectangle.png; path = ../../../Downloads/NewSpotifyRectangle.png; sourceTree = "<group>"; };
-		5E95CF4B264A20BC0034B1B8 /* appleMusicRectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appleMusicRectangle.png; path = ../../../Downloads/appleMusicRectangle.png; sourceTree = "<group>"; };
-		5E95CF50264A25300034B1B8 /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
 		8961B08325FC897800525761 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8987E7052603E2A20024AF2C /* PlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsView.swift; sourceTree = "<group>"; };
 		89A1999225D0EA3200FF9206 /* Vivace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vivace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +83,7 @@
 		89A199B325D0EA3300FF9206 /* VivaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A199B725D0EA3300FF9206 /* VivaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivaceUITests.swift; sourceTree = "<group>"; };
 		89A199B925D0EA3300FF9206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89D829562638705F0042B841 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "../../../Vivace Shared Folder/Localizable.strings"; sourceTree = "<group>"; };
 		89D8295A263879220042B841 /* MoreInfoCREATE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoCREATE.swift; sourceTree = "<group>"; };
 		89F79E152604328A00E6A690 /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
 		E0322DC2261F3D4800B625B4 /* albumblue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albumblue.jpg; sourceTree = "<group>"; };
@@ -184,8 +178,6 @@
 				89A1999725D0EA3200FF9206 /* ContentView.swift */,
 				5E5967D12604157C00AB3F7F /* SettingsStoryboard.storyboard */,
 				89A1999925D0EA3300FF9206 /* Assets.xcassets */,
-				5E95CF46264A20AE0034B1B8 /* NewSpotifyRectangle.png */,
-				5E95CF4B264A20BC0034B1B8 /* appleMusicRectangle.png */,
 				E0322DC2261F3D4800B625B4 /* albumblue.jpg */,
 				E07D3600261F049D00BCE1E2 /* 17570.png */,
 				E07D35FB261EFEA500BCE1E2 /* play-button (24)_5ab94929cf6aa.png */,
@@ -196,7 +188,6 @@
 				89A199A325D0EA3300FF9206 /* Info.plist */,
 				89A199A025D0EA3300FF9206 /* Vivace.xcdatamodeld */,
 				89A1999B25D0EA3300FF9206 /* Preview Content */,
-				5E95CF50264A25300034B1B8 /* Webview.swift */,
 			);
 			path = Vivace;
 			sourceTree = "<group>";
@@ -230,6 +221,7 @@
 		E078D00525D258AA00C128AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89D829562638705F0042B841 /* Localizable.strings */,
 				E07D35EE261EEE9A00BCE1E2 /* LibraryView.swift */,
 				E0C700D22613F4E2009F4C10 /* SceneDelegate.swift */,
 				E04EB40925EF38310009A5DC /* SwiftyJSON.swift */,
@@ -247,7 +239,6 @@
 				E0C701382616232F009F4C10 /* AppDelegate.swift */,
 				E0C701462616321C009F4C10 /* ViewController.swift */,
 				89D8295A263879220042B841 /* MoreInfoCREATE.swift */,
-				5E95CF41264A1DB40034B1B8 /* SourceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,15 +354,14 @@
 			files = (
 				E07D3601261F049D00BCE1E2 /* 17570.png in Resources */,
 				E0322DC3261F3D4800B625B4 /* albumblue.jpg in Resources */,
+				89D829572638705F0042B841 /* Localizable.strings in Resources */,
 				E07D35F4261EFDD200BCE1E2 /* spotify-download-logo-30.png in Resources */,
 				E07D35FC261EFEA500BCE1E2 /* play-button (24)_5ab94929cf6aa.png in Resources */,
 				5E5967D22604157C00AB3F7F /* SettingsStoryboard.storyboard in Resources */,
 				89A1999D25D0EA3300FF9206 /* Preview Assets.xcassets in Resources */,
 				5E5967C2260401ED00AB3F7F /* Settings.bundle in Resources */,
-				5E95CF47264A20AE0034B1B8 /* NewSpotifyRectangle.png in Resources */,
 				89A1999A25D0EA3300FF9206 /* Assets.xcassets in Resources */,
 				E0C7015F26169ECC009F4C10 /* 50numbr.jpg in Resources */,
-				5E95CF4C264A20BC0034B1B8 /* appleMusicRectangle.png in Resources */,
 				E0C7016F2616A2A7009F4C10 /* file-2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,13 +396,11 @@
 				89A1999625D0EA3200FF9206 /* VivaceApp.swift in Sources */,
 				E04EB43625F8F02B0009A5DC /* SearchView.swift in Sources */,
 				E078D01925D2722300C128AB /* MiniPlayer.swift in Sources */,
-				5E95CF51264A25300034B1B8 /* Webview.swift in Sources */,
 				E04EB41425EF38A20009A5DC /* Song.swift in Sources */,
 				E04EB40F25EF38740009A5DC /* AppleMusicAPI.swift in Sources */,
 				E0A1027A25D63B9900367F56 /* Search.swift in Sources */,
 				E04EB40A25EF38320009A5DC /* SwiftyJSON.swift in Sources */,
 				E0C701472616321C009F4C10 /* ViewController.swift in Sources */,
-				5E95CF42264A1DB40034B1B8 /* SourceView.swift in Sources */,
 				89D8295B263879220042B841 /* MoreInfoCREATE.swift in Sources */,
 				E078D00725D259C500C128AB /* TabBar.swift in Sources */,
 				8987E7062603E2A20024AF2C /* PlaylistsView.swift in Sources */,

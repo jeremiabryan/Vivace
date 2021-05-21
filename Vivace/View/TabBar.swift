@@ -35,12 +35,6 @@ struct TabBar: View {
                             Image(systemName: "tortoise.fill")
                             Text("Project Info")
                         }
-                    SourceView()
-                        .tag(1)
-                        .tabItem {
-                            Image(systemName: "magnifyingglass")
-                            Text("Source")
-                        }
 //                    PlaylistsView()
 //                        .tag(1)
 //                        .tabItem {
